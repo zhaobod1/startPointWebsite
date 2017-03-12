@@ -1,0 +1,104 @@
+
+ul{margin:0px;}
+
+#focus-banner5{
+	
+	width: 100%;
+	overflow: hidden;
+}
+
+
+#focus-banner5-list li{
+	
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+/* #focus-banner5-list li img{
+	width: 100%;
+} */
+.focus-banner5-img{
+	display: block;
+}
+
+#focus-banner5-list .focus-banner5-text{
+
+	left: 50%;
+	top: 0;
+	width: 1000px;
+	height: 100%;
+	margin-left: -500px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#focus-banner5 .focus-handle{
+	position: absolute;
+	top: 50%;
+	margin-top: -40px;
+	z-index: 100;
+	display: block;
+	width: 80px;
+	height: 80px;
+	background-image: url("../images/focus_handle.png");
+}
+#next-img{
+	left: 0;
+}
+#next-img{
+	left: 50px;
+	background-position: 0 0;
+}
+#next-img:hover{
+	background-position: 0 -80px;
+}
+#prev-img{
+	right: 0;
+}
+#prev-img{
+	right: 50px;
+	background-position: -80px 0;
+}
+#prev-img:hover{
+	background-position: -80px -80px;
+}
+
+#focus-bubble{
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	z-index: 999;
+}
+#focus-bubble li{
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border:1px #fff solid;
+	cursor: pointer;
+}
+#focus-bubble li.current{
+	background-color: #fff;
+}

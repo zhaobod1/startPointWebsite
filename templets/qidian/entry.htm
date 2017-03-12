@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html><head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title>起点出行 - 司机报名</title>
+  
+ 
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/js/jquery-ui/smoothness-jquery-ui.min.css">
+    <link href="{dede:global.cfg_templets_skin/}/css/main.css?2.0.2" type="text/css" rel='stylesheet' />
+    <link href="{dede:global.cfg_templets_skin/}/css/entry.css?2.0.2" type="text/css" rel='stylesheet' />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/bootstrap-ie6.css">
+    <![endif]-->
+    <link href="{dede:global.cfg_templets_skin/}/css/edj-widget-citybox.css" type="text/css" rel='stylesheet' />
+    <link href="{dede:global.cfg_templets_skin/}/css/style.css" type="text/css" rel='stylesheet' />
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/doT.min.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.8.3.min.js"></script>
+  
+    
+    <script>
+    $(function() {
+
+        if (location.search.substring(1) == 3) {
+            $("a.nav-bar-item").removeClass("activated");
+            $("div.col-container").hide();
+            $("#applyNav").addClass("activated");
+            $("#applyCol").show();
+        }
+        if (location.search.substring(1) == 4) {
+            $("a.nav-bar-item").removeClass("activated");
+            $("div.col-container").hide();
+            $("#examLink").addClass("activated");
+            $("#examCol").show();
+        }
+        $("a.nav-bar-item").on("click", function() {
+            var $navBarItem = $("a.nav-bar-item");
+            $navBarItem.removeClass("activated");
+            var colId = $(this).addClass("activated").data("col-id");
+            var $colContainers = $("div.col-container");
+            $colContainers.hide();
+            $colContainers.each(function() {
+                var $this = $(this);
+                if (colId == $this.data("col-id"))
+                    $this.show().find("div.straight-matter").hide().eq(0).show();
+                $this.find("ul.section-nav").find("li").removeClass("active").eq(0).addClass("active");
+
+            });
+        });
+        /*function selectList(listIndex, listItemIndex) {
+         var $colContainers = $("div.col-container");
+
+
+         }*/
+
+        $("ul.section-nav").find("a").live("click", function(e) {
+            var $this = $(this);
+            $this.parents("ul.section-nav").find("li").removeClass("active");
+            $this.parent().addClass("active");
+            var sectionId = $this.data("section-id");
+            var $parent = $this.parents("div.col-container");
+            $parent.find("div.straight-matter").hide();
+            $parent.find("div[data-section-id='" + sectionId + "']").show();
+            e.preventDefault();
+        });
+    });
+    </script>
+<script charset="UTF-8" src="http://js.t.sinajs.cn/open/api/{dede:global.cfg_templets_skin/}/js/api/bundle.js?version=20150130.02"></script><script charset="UTF-8" src="http://js.t.sinajs.cn/open/api/{dede:global.cfg_templets_skin/}/js/widget/iframeWidget/iframeWidget.js?version=20140327"></script></head>
+
+<body><iframe id="sina_anywhere_iframe" style="display: none;"></iframe>
+    <div class="header-container entry-banner">
+        <div class="top-nav">
+            <div class="nav-content">
+                 <!--头部开始-->
+{dede:include filename="header.htm"/}
+<!--头部结束-->
+            </div>
+        </div>
+    </div>
+    <div class="content-container secondary">
+        <div class="tile-basic entry">
+            <div class="custom-nav-bar">
+                <ul class="nav-bar-container">
+                    <li>
+                        <a class="nav-bar-item activated" data-col-id="1">
+                            <span>合作招募</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-bar-item" data-col-id="3" id="applyNav">在线报名</a>
+                    </li>
+                    <li>
+                        <a class="nav-bar-item" data-col-id="4" id="examLink">预约路考</a>
+                    </li>
+                    <li>
+                        <a class="nav-bar-item" data-col-id="6">报名查询</a>
+                    </li>
+                </ul>
+            </div>
+            <!--合作招募-->
+            <div class="col-container" data-col-id="1" data-edj-temp="corp" style="display: block;"><div class="left-container"><ul class="section-nav nav nav-list"> <li class="active"><a href="entry.html" data-section-id="1"><i class="icon-chevron-right"></i> 1.合作模式介绍</a></li> <li class=""><a href="#" data-section-id="2"><i class="icon-chevron-right"></i> 2.招募流程</a></li></ul></div><div class="right-container"> <!--合作模式介绍--> <div class="straight-matter" data-section-id="1" style="display: block;"> <h2>合作模式介绍</h2> <hr class="line"> <h3>1.合作条件</h3> <p>不少于五年驾龄、本市户口需要提供身份证、驾驶证、直系亲属联系方式，非本市户口需有身份证、驾驶证、暂住证（居住证），以及直系亲属联系方式。需要有熟练驾车经验，身体健康，无违法犯罪记录，无精神病史，无吸毒史及平台认为不适合代驾的其他历史的证明，并保证前述证明材料的真实、合法性。</p> <br> <h3>2.起点出行合作模式</h3> <p>起点出行跟每一位司机是合作关系，每位合作司机需要准备一部GPS定位手机。当有时间想做代驾的时候，在手机司机端上点击“开始工作”, 当没有时间或不想做代驾的时候，把手机调为“结束工作”。这就意味着代驾时间由自己决定。接单地点是通过手机GPS定位来实现的，客户能通过客户端选择自己心仪的代驾司机。</p> <br> <h3>3. 派单模式</h3> <p>（1）客户自助：客人下载起点出行客户端软件，在手机上就能看到离他最近的代驾司机的信息，选中其中的一位或一键下单，直接呼叫代驾司机来完成服务。</p> <p>（2）系统派单：客户下单预约代驾，系统会根据客户预约时间进行派单。</p> <br> <h3>4. 代驾师傅的收益</h3> <p>一位代驾师傅每月有约20个晚上在19：00-23：00接上2单，根据各地不同的收费标准，一个月可以拿到2000~6000元不等。</p> <br> <h3>5. 签约合作需要的物品</h3> <p>安卓系统手机: <br> （1）司机自备安卓系统手机一部用于安装司机端软件。<br> <span>手机要求: <br> 安卓手机系统4.0版本以上，支持3G或以上网络，最好使用单卡手机，手机系统不能ROOT/越狱，并具有GPS模块</span> （2）手机卡：<br> 部分城市须使用起点出行指定的手机卡，包含工作所需套餐及优惠资费，保证手机网络的稳定与高效，具体请咨询当地起点出行分公司。<br> （3）信息费：（开通网银和手机银行）<br> 代驾司机从合作起通过司机端进行自助充值，当信息费余额低于规定金额时系统将不再提供派单信息（如不及时充值，系统会自动暂停服务），代驾司机只需在个人账户自助充值续费，系统将恢复提供派单信息。<br> </p> <br> <h3>6. 司机考核</h3> <p>新签约合作的代驾司机在正式接单前由起点出行统一安排路考以及培训，路考通过并且考试合格后才能正式进行代驾服务。</p> <br> </div> <!--招募流程--> <div class="straight-matter" style="display: none;" data-section-id="2"> <h3>1、登陆起点出行网站</h3> <p>登陆www.edaijia.cn网站，点击“司机在线报名”, 熟悉招募流程。</p> <p>关注微信公众号“edaijiacs”也可以完成报名。</p> <br> <h3>2、在线预约</h3> <p>填写完报名信息，提交后请根据页面选择合适的时间进行预约。</p> <br> <h3>3、学习培训资料</h3> <p>预约后尽快关注微信公众号“edaijiacs”并在招募中心进行学习。</p> <br> <h3>4、考试合格后办理签约合作手续</h3> <p>按照平台标准参加考核并办理各项业务。</p> <br> <h3>5、领取胸牌</h3> <p>浏览公告或短信，及时领取正式胸牌。</p> <br> <div> <a href="entry.html?3">现在就去报名</a> </div> </div></div></div>
+            <!--培训资料-->
+            <div class="col-container" id="bookCol" style="display: none" data-col-id="2" data-edj-temp="training"><div class="left-container"> <ul class="nav nav-list section-nav" id="list-1"> <li class="active"><a href="#" title="公司简介" data-section-id="1"><i class="icon-chevron-right"></i> 关于起点出行</a></li> <li><a href="" title="收费标准" data-section-id="2"><i class="icon-chevron-right"></i> 收费标准</a></li> <li><a href="" title="起点出行司机端使用方法讲解" data-section-id="3"><i class="icon-chevron-right"></i> 起点出行司机端使用方法讲解</a></li> <li><a href="" title="系统自动派单以及司机代驾流程" data-section-id="4"><i class="icon-chevron-right"></i> 系统自动派单以及司机代驾流程</a></li> <li><a href="" title="与客户服务协议" data-section-id="5"><i class="icon-chevron-right"></i> 与客户服务协议</a></li> <li><a href="" title="司机接单流程视频演示" data-section-id="6"><i class="icon-chevron-right"></i> 司机接单流程视频演示</a></li> <li><a href="" title="服务规范" data-section-id="7"><i class="icon-chevron-right"></i> 服务规范</a></li> <li><a href="" title="常见问题" data-section-id="8"><i class="icon-chevron-right"></i> 常见问题</a></li> <li><a href="" title="代驾分扣分标准" data-section-id="9"><i class="icon-chevron-right"></i> 代驾分扣分标准</a></li> </ul></div><div class="right-container"><!--起点出行介绍--><div class="straight-matter" style="display: none;" data-section-id="1"> <h2>关于起点出行</h2> <hr class="line"> <h3></h3> <p>起点出行成立于2011年，是通过移动互联技术改善传统代驾服务的行业引领者。现在，通过起点出行手机应用，就可以发起代驾需求，在距离最近的5位代驾师傅中选择，为你提供代驾服务。</p> <p>起点出行有以下服务优势:</p> <p>1、39元（含10公里内）的超低代驾起步费用，节约客户使用成本;</p> <p>2、远超传统代驾的到达速度, 平均7分钟以内到达，最大限度的降低客户等待时间；</p> <p>3、完善的司机招募流程，司机驾龄必须大于5年，而且必须通过笔试、面试、培训、路考等严格的测试，确保了司机的专业技能；</p> <p>4、国内首家设立代驾责任险，一旦因为代驾师傅的原因出现交通事故，起点出行将一管到底，确保客户的利益不受损失。</p> <p>作为网络代驾领域的领军品牌，起点出行目前拥有近300人的运营管理团队，30000多名司机，在北京、上海、广州、深圳等100个城市开通了代驾服务，在国内的主要城市，都能享受到起点出行的安全和快捷。</p> <p>代驾是一种托付，更是一种信任，起点出行致力于为每一位顾客提供更加优质、全面的代驾服务，让有车的用户都能放心应酬，舒心到家，让代驾成为一种生活方式，让更多的用户体会科技升级带来的便捷生活。</p></div><!--收费标准--><div class="straight-matter fee-scale" style="display: none;" data-section-id="2"> <h2>收费标准</h2> <hr class="line"> <br> <h4>一类收费标准</h4><br> <p>起点出行收费标准——北京、上海、广州、深圳</p><br> <p>公司对外统一报价(司机师傅对客户的统一收费标准）</p> <br> <p>07:00-17:59&nbsp;&nbsp;&nbsp;&nbsp;29元(包含1小时、10公里)</p> <p>注：</p> <p>1.代驾时长超过1小时后，每30分钟加收15元，不足30分钟按30分钟计算。</p> <p>2.代驾距离超过10公里后，每1公里加收1元，不足1公里按1公里计算。</p> <p>3.延至晚19点以后的订单，客户需向司机支付夜间费用：19:00-23:59   15元/30分钟；00:00-06:59   30元/30分钟。（该价格仅限市区内代驾服务） </p> <br> <p>18:00-21:59&nbsp;&nbsp;&nbsp;&nbsp;39元(包含10公里)<br> 22:00-22:59&nbsp;&nbsp;&nbsp;&nbsp;59元(包含10公里)<br> 23:00-23:59&nbsp;&nbsp;&nbsp;&nbsp;79元(包含10公里)<br> 00:00-06:59&nbsp;&nbsp;&nbsp;&nbsp;99元(包含10公里) </p> <p>注：</p> <p>1.不同时间段的代驾起步费用以实际出发时间为准。</p> <p>2.按照司机端里程表计算公里数，代驾距离超过10公里后，每超过10公里加收20元， 不足10公里按10公里计算。 </p> <p>3.预约时间前到达客户指定位置，从预约时间开始计算，累计每满30分钟收20元等候费，不满30分钟不收费；预约时间之后到达客户指定位置，从司机到达时间后，每满30分钟收20元等候费，不满30分钟不收费。 </p> <br><br> <h4>二类收费标准</h4><br> <p>起点出行收费标准 ——杭州、成都、南京、西安、郑州、武汉、天津、济南、长沙、青岛、合肥、厦门、福州、宁波、沈阳、大连、太原、石家庄、海口、银川、哈尔滨、贵阳、南昌、西宁、长春、南宁、昆明、呼和浩特、兰州</p><br> <p>公司对外统一报价(司机师傅对客户的统一收费标准）</p><br> <p>07:00-17:59&nbsp;&nbsp;&nbsp;&nbsp;19元(包含1小时、5公里) </p> <p>注：</p> <p>1.代驾时长超过1小时后，每30分钟加收15元，不足30分钟按30分钟计算。</p> <p>2.代驾距离超过5公里后，每1公里加收1元，不足1公里按1公里计算。</p> <p>3.延至晚19点以后的订单，客户需向司机支付夜间费用：19:00-23:59   15元/30分钟；00:00-06:59   30元/30分钟。（该价格仅限市区内代驾服务）</p> <br> <p>18:00-21:59&nbsp;&nbsp;&nbsp;&nbsp;39元(包含10公里)<br> 22:00-22:59&nbsp;&nbsp;&nbsp;&nbsp;59元(包含10公里) </p> <p>注：</p> <p>1.不同时间段的代驾起步费用以实际出发时间为准。</p> <p>2.按照司机端里程表计算公里数，代驾距离超过10公里后，每超过5公里加收20元，不足5公里按5公里计算。</p> <p>3.预约时间前到达客户指定位置，从预约时间开始，每满30分钟收20元等候费，不满30分钟不收费；预约时间之后到达客户指定位置，从司机到达时间后，每满30分钟收20元等候费，不满30分钟不收费。</p> <br><br> <h4>三类收费标准</h4><br> <p>起点出行收费标准——湛江、珠海、佛山、汕头、阳江、漳州、江门、韶关、揭阳、三明、东莞、茂名、惠州、龙岩、潮州、中山、泉州、莆田、肇庆、宁德</p><br> <p>公司对外统一报价(司机师傅对客户的统一收费标准）</p><br> <p>07:00-21:59&nbsp;&nbsp;&nbsp;&nbsp;39元(包含10公里)<br> 22:00-06:59&nbsp;&nbsp;&nbsp;&nbsp;59元(包含10公里)</p> <p>注：</p> <p>1.不同时间段的代驾起步费用以实际出发时间为准。</p> <p>2.按照司机端里程表计算公里数，代驾距离超过10公里后，每超过5公里加收20元，不足5公里按5公里计算。</p> <p>3.预约时间前到达客户指定位置，从预约时间开始，每满30分钟收20元等候费，不满30分钟不收费；预约时间之后到达客户指定位置，从司机到达时间后，每满30分钟收20元等候费，不满30分钟不收费。</p> <br><br> <h4>四类收费标准</h4><br> <p>起点出行收费标准——重庆</p><br> <p>公司对外统一报价(司机师傅对客户的统一收费标准）</p><br> <p>07:00-17:59&nbsp;&nbsp;&nbsp;&nbsp;19元(包含1小时、5公里)</p> <p>注：</p> <p>1.代驾时长超过1小时后，每30分钟加收15元，不足30分钟按30分钟计算。</p> <p>2.代驾距离超过5公里后，每1公里加收1元，不足1公里按1公里计算。</p> <p>3.延至晚19点以后的订单，客户需向司机支付夜间费用：19:00-23:59   15元/30分钟；00:00-06:59   30元/30分钟。（该价格仅限市区内代驾服务）</p> <br> <p>18:00-06:59&nbsp;&nbsp;&nbsp;&nbsp;39元(包含10公里)</p> <p>注：</p> <p>1.按照司机端里程表计算公里数，代驾距离超过10公里后，每超过5公里加收20元，不足5公里按5公里计算。</p> <p>2.预约时间前到达客户指定位置，从预约时间开始，每满30分钟收20元等候费，不满30分钟不收费；预约时间之后到达客户指定位置，从司机到达时间后，每满30分钟收20元等候费，不满30分钟不收费。</p> <br><br> <h4>五类收费标准</h4><br> <p>起点出行收费标准——苏州、无锡、常州、常熟、昆山</p><br> <p>公司对外统一报价(司机师傅对客户的统一收费标准）</p><br> <p>07:00-17:59&nbsp;&nbsp;&nbsp;&nbsp;19元(包含1小时、5公里)</p> <p>注：</p> <p>1.代驾时长超过1小时后，每30分钟加收15元，不足30分钟按30分钟计算。</p> <p>2.代驾距离超过5公里后，每1公里加收1元，不足1公里按1公里计算。</p> <p>3.延至晚19点以后的订单，客户需向司机支付夜间费用：19:00-23:59   15元/30分钟；00:00-06:59   30元/30分钟。（该价格仅限市区内代驾服务）</p> <br> <p>18:00-20:59&nbsp;&nbsp;&nbsp;&nbsp;19元(包含5公里)</p> <p>21:00-06:59&nbsp;&nbsp;&nbsp;&nbsp;29元(包含5公里)</p> <p>注：</p> <p>1.不同时间段的代驾起步费用以实际出发时间为准。</p> <p>2.按照司机端里程表计算公里数，代驾距离超过5公里后，每超过5公里加收20元，不足5公里按5公里计算。</p> <p>3.预约时间前到达客户指定位置，从预约时间开始，每满30分钟收20元等候费，不满30分钟不收费；预约时间之后到达客户指定位置，从司机到达时间后，每满30分钟收20元等候费，不满30分钟不收费。</p> <br><br> <h4>六类收费标准</h4><br> <p>起点出行收费标准——南通、扬州、镇江、徐州、金华、绍兴、嘉兴、湖州、洛阳、大同、丽水、连云港、盐城、泰州、唐山、潍坊、济宁、德州、威海、宿迁、绵阳、德阳、宜昌、襄阳、日照、莱芜、萍乡、黄石、荆州、舟山、淮安、温州、锦州、运城、汉中、渭南、新余、商丘、焦作、许昌、宝鸡、长治、临沂、邯郸、达州、义乌、衡阳、岳阳、常德、郴州、安庆、柳州、蚌埠、宿州、自贡、广元、娄底、益阳、株洲、烟台、三门峡、泸州、承德、淄博、濮阳、安阳、赤峰、新乡、十堰、景德镇、宜宾、淮南、赣州、九江、松原、佳木斯、黄冈、南阳、保定、芜湖、江阴、开封、湘潭、吉林、晋城、大庆、平顶山</p><br> <p>公司对外统一报价(司机师傅对客户的统一收费标准）</p><br> <p>07:00-20:59&nbsp;&nbsp;&nbsp;&nbsp;19元(包含5公里)</p> <p>21:00-06:59&nbsp;&nbsp;&nbsp;&nbsp;29元(包含5公里)</p> <p>注：</p> <p>1.不同时间段的代驾起步费用以实际出发时间为准。</p> <p>2.按照司机端里程表计算公里数，代驾距离超过5公里后，每超过5公里加收20元，不足5公里按5公里计算。</p> <p>3.预约时间前到达客户指定位置，从预约时间开始，每满30分钟收20元等候费，不满30分钟不收费；预约时间之后到达客户指定位置，从司机到达时间后，每满30分钟收20元等候费，不满30分钟不收费。</p> <br> <br> <h4>特殊代驾服务</h4> <br> <h5><strong>（1）长途代驾收费标准</strong></h5> <p>&nbsp;&nbsp;起步费用:&nbsp;&nbsp;300元</p> <p>&nbsp;&nbsp;包含公里数:&nbsp;&nbsp;300公里</p> <p>&nbsp;&nbsp;1.不足300公里按300公里计算, 超过300公里，每增加1公里加收1元。</p> <p>&nbsp;&nbsp;2.中途等候时间：10元/1小时，代驾总时长每满24小时加收200元。</p> <p>&nbsp;&nbsp;3.单程代驾需支付代驾司机的返程交通费用（交通工具限火车硬座及长途汽车,8小时以上限硬卧）。</p> <p>&nbsp;&nbsp;4.长途代驾过程中发生的燃油费，路桥费及代驾司机的食宿费皆由委托代驾的客户方承担，客户方也可将食宿费以现金的形式直接支付给乙方（餐费30元/餐/人, 住宿费100元/宿/人）。</p> <br> <p>*备注事项：</p> <p>&nbsp;&nbsp;1.长途代驾服务在规定服务里程内，按上列对应服务价格收取费用。</p> <p>&nbsp;&nbsp;2.长途代驾服务中应该每4小时休息半小时，以保障安全驾驶。</p> <p>&nbsp;&nbsp;3.上表所列的基准价格限轿车/小型车。大巴士等（11座以上）大型客车需在此基准价格的基础上上浮30%收费。</p> <p>&nbsp;&nbsp;4.客人必须签署委托代驾协议，否则代驾司机有权拒绝本次服务。</p> <p>&nbsp;&nbsp;5.长途代驾按行政区域划分, 具体请咨询4008103939。</p> <br> <h5><strong>（2）商务代驾收费标准</strong></h5> <p>&nbsp;&nbsp;时间:&nbsp;&nbsp;09:00-----18:00 </p> <p>&nbsp;&nbsp;费用:&nbsp;&nbsp;300元</p> <p>如超过18:00，每满一个小时，加收40元，最晚至22:00</p> <p>代驾时长不足8小时按8小时计费。</p> <br> <p>*备注事项：</p> <p>&nbsp;&nbsp;1.商务代驾服务在规定服务区域内，按上列对应服务价格收取费用。</p> <p>&nbsp;&nbsp;2.商务代驾服务中，代驾人员有一小时休息时间，以保障安全驾驶。</p> <p>&nbsp;&nbsp;3.上表所列的基准价格限轿车/小型车。大巴士等（11座以上）大型客车需在此基准价格的基础上上浮30%收费。</p> <p>&nbsp;&nbsp;4.客人必须签署委托代驾协议，否则代驾司机有权拒绝本次服务。</p> <p>&nbsp;&nbsp;5.商务代驾, 具体请咨询4008103939。</p> <br></div><!--起点出行司机端使用方法讲解--><div class="straight-matter" style="display: none;" data-section-id="3"> <h2>起点出行司机端使用方法讲解</h2> <hr class="line"> <br> <div> <h3>第一步:登陆司机端</h3><br> <img alt="" src="img/driver-client-step1.jpg"> <p>用户名是自己的工号,初始密码是身份证后六位(最后一位是字母的,切换成大写登陆)</p> <h3>第二步:状态切换  点击红圈中“开始工作”</h3><br> <img alt="" src="img/driver-client-step2-1.jpg"> <img alt="" src="img/driver-client-step2-2.jpg"> <h3>第三步：客户下单，在30秒中之内点击“接单”，超出时间会被系统收回。接单后点击客户电话回拨，跟客户确认时间、地点，到达后点击“我已就位”。</h3><br> <img alt="" src="img/driver-client-step3-1.jpg"> <img alt="" src="img/driver-client-step3-2.jpg"> <h3>第四步：客人出来后核对客人身份，检查车况后上车，询问客人地点，点击“开车”</h3><br> <img alt="" src="img/driver-client-step4.jpg"> <h3>第五步：到达客人指定位置后点击“结束代驾”，司机端会弹出“代驾服务结束”对话框，点击“确定”，</h3><br> <img alt="" src="img/driver-client-step5-1.jpg"> <img alt="" src="img/driver-client-step5-2.jpg"> <p>然后弹出下面的对话框，点击“确定”</p> <img alt="" src="img/driver-client-step5-3.jpg"> <p>如果是客户帐号中有足够余额，直接点击“报单”，如果客户帐号中没有余额，点击“仅收现金，”然后点击“报单”。</p> <img alt="" src="img/driver-client-step5-4.jpg"> <h3>第六步：填写车牌号码，点击“完成报单”，系统弹出“确认订单结束并报单”，点击“确定”，完成报单。</h3><br> <img alt="" src="img/driver-client-step6-1.jpg"> <img alt="" src="img/driver-client-step6-2.jpg"> </div></div><!--系统自动派单以及司机代驾流程--><div class="straight-matter" style="display: none;" data-section-id="4"> <h2>系统自动派单以及司机代驾流程</h2> <hr class="line"> <br><br> <h3>起点出行400客服系统自动派单以及司机代驾流程</h3><br> <div> <p>第一步:&nbsp;客户拨打400电话，致电&nbsp;起点出行客户服务中心</p> <p>第二步: 客服人员记录客户的信息：姓名、电话、预约时间、出发地点、预约人数等，并提交至派单系统。</p> <p>第三步: 客服人员提交订单后，派单系统会自动就客户位置搜索附近空闲状态的司机师傅。被搜索到的师傅， 系统会连续30秒振铃其工作手机，司机在30秒内点击“接单”后，手机状态会自动调整为服务中，工作手机上会显示客户电话、客户位置，最佳到达路线。接单后需要第一时间致电客户确认需要的信息：具体的地址，并告知客户到达大概花费的时间等。<br> ***若在振铃的30秒内没有点击“接单”，系统会自动默认为拒单，并振铃下一位司机。</p> <p>第四步: 司机到达客户指定地点后，需要立即电话告知客户我已到达以及相关等候费的收费标准，并点击到达。</p> <p>第五步：见到客户后，应该由客户报出手机尾数，确认客户身份，避免接错人。确认客户后需要出示工牌，标准服装。确认代驾车辆后，需要检查车辆外观，如有损坏需要在确认单注明。</p> <p>第六步: 上车后司机需要开启里程表和填写确认单：客户的基本信息，预约时间，出发时间，出发地点等，并让客户在右下角委托方处签字确认。行驶途中可进行适当的交流，但是不主动引发话题。</p> <p>第七步: 安全到达后，注意停车安全。司机填写确认单其余部分：到达公里数，等候时间，到达地点等，等候费，应收代驾费用，实收代驾费用等。（起步价格是按照客户实际出发时间计算；等候时间是出发前与行驶途中等候累计计算。）</p> <p>第八步：让客户在确认单左下角签字确认，表示对我们的服务和收费认可。确认单客户联交给客户。</p> <p>第九步： 收取代驾费，并主动找零钱。</p> <p>第十步： 如果客人需要发票，需要给客户提供手撕发票或机打发票。</p> <p>第十一步： 把车辆锁好，关好车窗，车门并且提醒客户收好贵重物品。</p> <p>第十二步： 司机客户端上点击“完成”，表明此单完成。</p> <p>服务宗旨： 起点出行的司机必须提供专业的、优质的微笑服务!</p> </div> <h3>起点出行手机客户端（app）自助呼叫司机工作流程</h3><br> <div> <p>第一步  客户下载起点出行手机APP，输入手机号码，系统发送验证码，收到验证码确认客户身份以及手机号码的真实性。</p> <p>第二步  点击进入APP，客户可以看到附近的5位空闲司机。</p> <p style="text-indent:2em;">一键下单：直接点击我要司机，系统会自动记录客户位置，默认1位司机，推送进入派单系统，派单系统会自动就客户位置搜索附近空闲状态的司机师傅。被搜索到的师傅， 系统会连续30秒振铃其工作手机，司机在30秒内点击“接单”后，手机状态会自动调整为服务中，工作手机上会显示客户电话、客户位置，最佳到达路线。接单后需要第一时间致电客户确认需要的信息：具体的地址，并告知客户到达大概花费的时间等。</p> <p style="text-indent:2em;">选司机下单：定位确定后，系统会显示附近5位空闲司机，由客户选择其中一位下单，选择后系统会连续振铃被选中的司机的工作手机，提示有新订单，司机需要在30秒内接单。接单后手机状态会自动调整为服务中，工作手机上会显示客户电话、客户位置，最佳到达路线。接单后需要第一时间致电客户确认需要的信息：具体的地址，并告知客户到达大概花费的时间等。</p> <p>***若在振铃的30秒内没有点击“接单”，系统会自动默认为拒单，并振铃下一位司机。</p> <p>第三步: 司机到达客户指定地点后，需要立即电话告知客户已到达以及相关等候费的收费标准，并点击到达。</p> <p>第四步：见到客户后，应该由客户报出手机尾数，确认客户身份，避免接错人。确认客户后需要出示胸卡。确认代驾车辆后，需要检查车辆外观，如有损坏需要在确认单注明。</p> <p>第五步: 上车后司机需要开启里程表和填写确认单：客户的基本信息、预约时间、出发时间、出发地点等，并让客户在右下角委托方处签字确认。行驶途中可进行适当的交流，但是不主动引发话题。</p> <p>第六步: 安全到达后，注意停车安全。司机填写确认单其余部分：到达公里数，等候时间，到达地点等，等候费，应收代驾费用，实收代驾费用等。（起步价格是按照客户实际出发时间计算；等候时间是出发前与行驶途中等候累计计算。）</p> <p>第七步：让客户在确认单左下角签字确认，表示对我们的服务和收费认可。确认单客户联交给客户。</p> <p>第八步： 收取代驾费，并主动找零钱。</p> <p>第九步： 如果客人需要发票，需要给客户提供手撕发票或机打发票。</p> <p>第十步： 把车辆锁好，关好车窗、车门并且提醒客户收好贵重物品。</p> <p>第十一步： 司机客户端上点击“完成”，表明此单完成。</p> <p>服务宗旨： 起点出行的司机必须提供专业的，优质的微笑服务!</p> </div></div><!--与客户服务协议--><div class="straight-matter" style="display: none;" data-section-id="5"> <h2>与客户服务协议</h2> <hr class="line"> <br><br><br> <div class="custom-figure"> <img src="img/order_confirm.jpg" alt=""> </div></div><!--司机接单流程视频演示--><div class="straight-matter" style="display: none;" data-section-id="6"> <h2>司机接单流程视频演示</h2> <hr class="line"> <h3></h3> <p> <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="458" width="640"> <param name="quality" value="high"> <param name="movie" value="http://player.youku.com/player.php/sid/XNTM5MjAwMzE2/v.swf"> <embed src="http://player.youku.com/player.php/sid/XNzkyNjg4OTE2/v.swf" allowfullscreen="true" quality="high" width="640" height="458" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"> </object> </p></div><!--起点出行代驾员服务流程及服务规范--><div class="straight-matter" style="display: none;" data-section-id="7"> <h2>起点出行代驾员服务流程及服务规范</h2> <hr class="line"> <br><br><br> <h2>第一章：服务规范</h2><br> <div>为了规范代驾服务，建立公正、公平、公开、透明的环境，所以代驾员必须坚决履行实施起点出行统一标准的服务规范。</div> <h3>一、岗前准备</h3><br> <div> <p>1、上岗前十小时严禁饮酒；</p> <p>2、快乐工作、享受工作快乐；</p> <p>3、心态的调整(微笑上岗、笑的标准、清晰的音调、语音、语速)；</p> <p>4、仪容仪表(着装、头发、指甲干净整洁、勤洗澡不能有异味、统一着装、佩戴胸卡)；</p> <p>5、身体状态(不应带病上岗，保证身体状况良好)；</p> <p>6、物品整理(驾照、手机音量调整适当、胸卡、确认单、零钱、纸、笔、名片、纸巾)；</p> <p>7、不吃有异味的食品，保持口腔清洁；</p> </div> <h3>二、调整工作状态</h3><br> <div> <p>1、上岗前登录司机端。</p> <p>2、随时关注公司公告，了解最新动态，准备接单。</p></div> <h3>三、服务流程及规范</h3><br> <div> <p>工作手机接听电话必说：您好，起点出行，很高兴为您服务</p> <p style="color: red">1．接单<br> 第一次与客户电话沟通：核实客户信息<br> 使用标准用语与客户沟通，沟通中需要记录客户基本信息、所在位置、预计出发时间，并告知大概的到达时间，能否准时到达等。</p> <p>标准用语例句：<br> (1) 先生（女士）您好，我是起点出行的第XX号代驾员XX，很高兴为您服务，请问怎么称呼？<br> (2) 您的具体地址在哪里？<br> (3) 您的预约时间是xx点xx分对吧？<br> (4) 您预约了X位司机（如果人数大于2，需要告诉客户我是组长，为了避免打扰您就餐，组员不与您直接联系，但组员会与我一同前往）。<br> (5) 我会在XX：XX之前到您那里，到达后会再次与您联系。祝您用餐愉快，等会见！ </p> <p style="color: red">第二次与客户电话沟通：就位后确认流程<br> 使用标准用语与客户沟通，到达后主动联系客户，告知客户已经就位（是否按时到达，如不是，表示抱歉，并解释原因），并告知客户请不要着急，自己会在此等候，联系完成后在司机端点击我已就位。</p> <p>标准用语例句：<br> XX先生（女士）您好：我是起点出行的XX号代驾员，刚刚有与您联系过，我现在已经到达您的指定地点，您可以随时出发。如果您还在用餐，没有关系，我可以等您，我们的等候费用的收费规则是累计等候每满30分钟加收XX元，不足30分钟不收费。 </p> <p style="color: red">见面后的沟通：见面后服务流程<br> 使用标准用语与客户沟通：沟通中对客户使用尊称，自报编号，并展示工牌，工服，语气要热情，态度和蔼。请客户提供预约电话的4位尾号，确认客户身份，以免接错客户，并主动展示计价器。</p> <p>标准用语例句：<br> XX先生（女士）您好，麻烦提供一下您预约时的手机尾号，以免接错。<br> 您好我是起点出行的XX号代驾员XX，很高兴为您服务。这是我的胸卡和我司的统一服装（双手拿起胸卡展示，还可以提醒客户，下次再预约我司的代驾服务，可以通过标准统一服装和胸卡来确认，避免社会人员冒充）</p> <p style="color: red">2、接到客户，代驾过程中</p> <p style="color: red;">（1）上车前：与客户沟通了解车况<br> 双手接过钥匙，详细检查车辆外观，帮客户开车门，用手遮挡保护，记录号车牌车型，整理好自带交通工具，当车辆出现问题时需要及时告知客户。如有不熟悉的地方，需要虚心请教。</p> <p>标准用语例句：先生（女士）您的车真高档，我还没有怎能开过。耽误您1分钟，我熟悉一下。（如有操作不熟悉地方，需要请教客户、咨询客户)</p> <p style="color: red">（2）上车后：签署服务确认单并确认目的地<br> 使用随身携带的湿纸巾擦手，摆放好手机支架，并把手机摆放在明显的位置，展示起步情况（出发时间，等候时间，起步价格），签署服务确认单，记录仪表盘里程数作为备用，并确认目的地。</p> <p>标准用语例句：先生（女士），真的很抱歉，您的目的地由于我平日去的较少，为了避免走错路，导致增加额外里程，产生多于平日的代驾费用，您方便给我引导一下路线吗？<br> 先生（女士）您好，您的目的地是XX，现在是X点X分，起步费为XX元，每超过X公里收取XX元。目前已等候您XX时间，累计每满30分钟收取XX元，目前的等候费为XX元。</p> <p style="color: red"> 系好安全带，并提醒副驾驶座系好安全带。观察路面以及周边环境，平稳起步，起步时开启方向灯。<br> 平稳驾驶，不超速，不违章，并道开启方向灯，转弯开启方向灯，路口减速观察，无不良驾驶习惯（单手握方向盘、手搁车窗、换档等）。<br> 事先告诉客户路线选择，征得客户同意后再进行。在经过高速高架涉及费用需提前告知客户，由客户确认是否走高速。<br> 行驶途中不主动引发话题，客户询问，需要掌握公司以及产品的基本信息，可进行简单介绍产品优势。<br> 代驾中如客户需离开车辆或者下车<br> 需要告知客户等候费收取规则，提醒客户拿好贵重物品，关好车窗以及用电设备并归还钥匙，在车边等候，如客户需要帮助，尽量帮忙。</p> <p>标准用语例句：先生（女士）您好，请您拿好贵重物品，我将您的车辆关好，我司规定不能够单独在您车内，我就在车外等您，将钥匙归还给您。</p> <p style="color: red">*如发生交通事故：安抚客户，熟悉处理流程并打电话到客服中心报备，配合公司以及客户积极处理。</p> <p style="color: red">3、代驾结束后</p> <p style="color: red">（1）停车：安全平稳停车，关闭所有车窗（天窗），用电设备，检查车辆档位，正确发动机熄火，主动归还钥匙。</p> <p>标准用语例句：先生（女士）您好，现在已到达指定的位置。车已经停到您的指定地点，请您查看车辆是否有其他的问题。这是您的车钥匙。</p> <p style="color: red">（2）与客户确认代驾费总金额：主动展示里程表，告知客户消费金额（起步价、等候费、里程费），并提醒客户检查车内物品，提醒客户带好随身物品，请客户签字确认（如里程有异议，按照客户车辆里程计算）。</p> <p>标准用语例句：先生（女士）您好，请您查看里程表，代驾服务费为XX元，其中起步价XX元，等候XX分钟XX元，里程XX公里XX元，累计XX元，麻烦您签署服务确认单。（签署完成后说：感谢您使用起点出行）</p> <p style="color: red">①现金结款时：主动找零，不索要额外费用，如客户支付小费请客户再次签字确认。</p> <p>标准用语例句：先生（女士）您好，您一共付了XX元，实际消费XX。麻烦您收取余款以及发票。（如客户说不需要找零就当小费），司机说感谢您的支持。公司规定不能收取额外费用，如您支付小费请您帮忙再次签署服务确认单做确认</p> <p style="color: red">②代金卡结算：主动告知使用规则，叠加超出不找零，不索要额外费用。</p> <p>标准用语例句：先生（女士）您好，您的实际消费为XX元，如果你使用代金卡的情况，请查看是否已过有效期，方便告诉您公司规定5元面值只能使用一次，不能叠加使用。39元面值可以叠加使用，不找零不开发票，请留意。</p> <p style="color: red">③VIP结账：熟悉操作VIP扣款流程，不索要额外费用，余额充足，不收取现金，提醒客户扣款金额。</p> <p>标准用语例句：先生（女士）您好，您的实际消费为XX元，您是我们的VIP用户，您的账户余额充足，我直接从您的VIP账户扣款即可，您不需要支付现金。（如余额不足时，不足部分需要支付现金）</p> <p style="color: red">4、索要发票：随身携带手撕发票，如客户需要机打发票，需要告知客户机打发票的邮寄规则（总消费大于金额500元，公司从北京免费邮寄，小于500元需要客户自己承担邮寄费用，快递到付）</p> <p>标准用语例句：标准：先生（女士）您好，您的实际消费为XX元，请收好你的发票（如客户要求开具增值税发票，先生（女士）您好：我们的发票是北京地税发票，以快递的形式邮寄给您。发票金额大于500元由我公司承担快递费用，如小于500元由您个人承担快递费用。</p> <p style="color: red">5、与客户道别：双手交还钥匙，主动索要好评，看客户是否还需要帮助，对客户使用起点出行表示感谢。</p> <p>标准用语例句：先生（女士）您好，感谢使用起点出行服务。我的服务您觉得满意吗，如果满意请您给予5分好评，非常感谢。您看还有什么能帮您的吗？感谢您对起点出行的支持，希望下次再次为您服务。再见！</p> </div> <h3>四、代驾员驾车必须遵守交通法。</h3><br> <p>文明驾驶车辆，注意行车安全，严禁危险驾驶行为。行车途中如发生交通事故，应当立即报警并通知公司，积极配合事故处理并安抚客人。</p><br> <h3>五、服务行为与规范</h3><br> <div> <p>良好的服务口碑是起点出行立足之根本，每位代驾员必须遵守以下规定：</p> <p>1、严禁代驾员饮酒后进行代驾服务。</p> <p>2、严禁谩骂客户</p> <p>3、严禁与客户发生肢体冲突</p> <p>4、严禁粗暴驾驶并违反交通规则，如违反交通法规发生交通事故，代驾员承担全部后果和责任。</p> <p>5、如代驾过程中发生突发状况需第一时间上报公司。</p> <p>6、不准索要额外费用。</p> <p>7、主动找零。</p> <p>8、不准拒单、逃单、挑单。</p> <p>9、与客户签署代驾服务协议。</p> <p>10、正确填写确认单,主动告知客户费用明细。</p> <p>11、佩戴胸卡,着起点出行公司统一配发的服装，推广起点出行公司服务和产品。</p> <p>12、正确使用代驾专用手机。</p> <p>13、态度积极,有服务意识,使用标准服务用语。</p> <p>14、不准恶意绕行。</p> <p>15、不准骚扰客户（包括出现短信差评私自与客户联系）。</p> <p>16、不准将代驾专用手机交由他人使用。</p> <p>17、不准将起点出行公司提供的客户私下转让给其他人员。</p> <p>18、不准恶意散布谣言。</p> <p>19、安全驾驶,遵守交通规则。</p> <p>20、为了不断提高服务质量需要定期参加起点出行公司组织的合作培训活动。</p> <p>21、有义务在下车时检查并关闭所有车门及车窗，并提醒客户检查车上的贵重物品并妥善管。 </p> <p>实施细则：合作代驾员和公司达成合作意向并签订合作协议。</p> <p>合作代驾员遵守合作协议及服务须知、不得损毁公司形象、透露公司商业秘密。</p> <p>终止合作条件：合作期满后方自动终止合作，未满合作期如需终止合作必须提前1个月提交终止合作申请并书写详由（请于每月15日前提出申请），移交手续完毕后方可终止合作，账上余款会在终止合作次月15号存入合作代驾员个人账户（遇节假日顺延）。</p> <p>终止合作后在两年内不得向外透露公司商业机密，如对本公司造成不良后果责任将由合作代驾员负责，并向有关单位提起诉讼！</p> </div></div><!--常见问题--><div class="straight-matter" style="display: none;" data-section-id="8"> <h2>常见问题</h2> <hr class="line"> <br><br><br> <h3>一、办理完签约合作手续后怎样才可以登录司机端？</h3><br> <div> <p>领取胸卡、标准服装、手机支架（以押金的形式），按照公司规定准备好手机和手机卡，下载安装司机端，通过司机端进行充值，充值后可以激活上岗。</p> </div> <h3>二、代驾过程中遇到里程表不走或与客户车上的里程表不符该怎么办？</h3><br> <div> <p>1、里程表不走可能是由于网络信号不好或司机师傅操作不当而引起。</p> <p>2、遇到类似问题时：首先应与客户沟通按照车上的里程表计算相关的代驾费用。跟客户说明原因后并表示歉意。到达客户指定地点先按照手机里程表显示的代驾金额进行报单，里程表与实收金额不符时，必须在第二天下午15:00之前在“反馈”-“问题订单”中填写单号及简要叙述后点击“提交”即可，会有专人处理。</p> </div> <h3>三、夜间代驾员遇到困难怎么办？</h3><br> <div> <p>如夜间遇到相关问题直接拨打司机热线：4008903939请求帮助即可。</p> </div> <h3>四、起点出行司机端软件使用中遇到的相关问题及解决方法：定位不准或地图不显示、笑脸不出来、里程表不走？</h3><br> <div> <p>1、先将原有的司机端进行卸载后，手机打开浏览器（任意浏览器均可）输入wap.edaijia.cn下载司机端安装即可。</p> <p>2、把接入点WAP改为CTNET模式。</p> <p>3、司机可在司机端更多页面进行意见反馈，会有专人负责登记并与技术部门进行沟通。</p> <p>4、手机上的GPS定位显示图标不闪烁表示定位已准确。</p> </div> <h3>五、报单遇到的相关问题？</h3><br> <div> <p>1、VIP报单错误或VIP金额未充值请在“工单系统”中“问题订单”填写单号及简要叙述后点击“提交”，会有专门的负责人联系处理。</p> <p>2、重复报单或由于操作不当误开里程表形成订单，司机师傅首先应查清此单的流水号（在已报单里查找）后在司机端-更多-反馈-问题订单填写相关信息并进行简要描述，由客户服务中心-服务组工作人员进行核实。预计核实成立将在下周周一返还相关信息费用。</p> <p>3、如报单时VIP客户的账户余额不足以支付本次代驾金额，直接向客户收取差额即可。</p> </div> <h3>六、关于延迟报单的相关问题？</h3><br> <div> <p>1、因为延迟报单而被扣除罚金30元。为规避此类问题，系统将会在第二天下午14:00之前给予师傅们短信提醒，如有未报单请及时处理。（注：接到此类短信通知，是因为网络原因报单未成功，需及时查阅订单并做出处理）。</p> <p>2、若因您不及时查看订单信息而造成的扣费，我们将不再受理。</p> </div> <h3>七、销单情况说明？</h3><br> <div> <p>1、客户直接呼叫时，与客户协商一致或非客户呼叫，电话挂断您可在30秒内点击销单。（直接点击销单功能，然后选择销单类型即可。）</p> <p>2、呼叫中心派单您可在30秒内选择接单或拒绝。</p> <p>3、取消订单只能在订单接受后到开车之前进行，不同阶段有不同理由，司机可选择正常销单或销单同时并投诉。</p> <p>4、里程表开启后将不可销单。</p> </div> <h3>八、如何查询对账单明细？</h3><br> <div> <p>1、用电脑登录：www.edaijia.cn/v2，用户名：BJxxxx密码：身份证后六位。</p> <p>2、在报单栏里查找相应的定单，有相应的年月日，点击查看对账单明细即可。</p> </div> <h3>九、如何给客户开发票？</h3><br> <div> <p>1、手撕发票代驾员可直接提供给客户与代驾金额相符的发票（发票到分公司购买）。</p> <p>2、如客户要求开机打发票时，用电脑登录：www.edaijia.cn/v2，用户名：编号BJxxxx密码，在左边查找已报账单，在报单栏里找到相应的订单，点击填写发票名称及代驾金额（如：客户此次代驾金额低于500元，需客户自行承担相应的快递费用，也可累积够500元后开发票，快递费由公司承担）。注：小费不予开发票（代驾员需告知客户）。</p> </div> <h3>十、39元电子优惠劵、10元电子优惠劵如何返还？</h3><br> <div> <p>39元电子优惠劵、10元电子优惠劵司机师傅需先用电脑登陆：www.edaijia.cn/v2用户名：BJxxxx编号、密码登录，点击对账单查询优惠劵是否返还。若未返还请在司机端-更多-反馈-问题订单提交相关信息，会有专人核实处理，核实无误后将在7个工作日内返还至信息费账户。</p> </div> <h3>十一、针对醉酒客户该如何处理？</h3><br> <div> <p>1、如无人陪同的情况下接到客户的时候应提前存储一下客户朋友的手机号码。（勿动客户的私人物品）。</p> <p>2、拨打112查询车主的紧急联系人。</p> <p>3、把车开到附近的派出所，寻求警察帮助。</p> </div></div><!--代驾分扣分标准--><div class="straight-matter" style="display: none;" data-section-id="9"> <h2>代驾分扣分标准</h2> <hr class="line"> <br><br><br> <div> <p>我们于2014年7月16日在全国范围内试运营。类似驾驶证扣分制度，代驾证分满分12分，依据起点出行扣分规则，违规行为会按严重程度不同扣除不同分值，详细见起点出行扣分规则。从代驾员入职领取代驾证之日起计算，一年（按365天）根据代驾次数进行恢复，每60次代驾恢复1分，最多不超过12分。</p> <p>根据代驾员的扣分情况，公司会对代驾员进行相应惩罚：</p> <p>1、当代驾员扣分后，剩余分值小于或等于6分且大于3分时，触发屏蔽3天，3天到自动解屏；</p> <p>2、当代驾员扣分后，剩余分值小于或等于3分且大于0分时，触发屏蔽7天，且代驾员需要按各地分公司司管安排，及时回分公司培训；</p> <p>3、当代驾员扣分后，剩余分值小于或等于0分时，触发永久屏蔽。</p> </div> <div align="center"> <!--<img src="img/driver-score.jpg" alt=""/>--> <table class="table table-bordered"> <thead> <tr> <th>监控方式</th> <th>问题细项</th> <th>扣分数</th> </tr> </thead> <tbody><tr> <td rowspan="2">系统监控</td> <td>按城市每月最后一天取拒单率前10%</td> <td>-1</td></tr><tr><td>按城市每月最后一天取销单率前10%</td><td>-1</td></tr><tr><td rowspan="35">品质监控</td><td>未穿工服</td><td>-3</td></tr><tr> <td>组长未尽责</td> <td>-3</td></tr><tr> <td>驾驶技术</td> <td>-3</td></tr><tr> <td>接错客户</td> <td>-3</td></tr><tr> <td>道路不熟悉</td> <td>-2</td></tr><tr> <td>未及时通报迟到</td> <td>-3</td></tr><tr> <td>联系不上客户，未告知客户</td> <td>-3</td></tr><tr> <td>未提醒客人检查车上物品</td> <td>-3</td></tr><tr> <td>服务态度问题</td> <td>-3</td></tr><tr> <td>司机不注意个人卫生</td> <td>-3</td></tr><tr> <td>交通违章</td> <td>-6</td></tr><tr> <td>事后骚扰</td> <td>-6</td></tr><tr> <td>多收费</td> <td>-6</td></tr><tr> <td>组长私自派单</td> <td>-6</td></tr><tr> <td>逃单</td> <td>-6</td></tr><tr> <td>双方事故</td> <td>-6</td></tr><tr> <td>辱骂公司人员</td> <td>-6</td></tr><tr> <td>虚假报单</td> <td>-6</td></tr><tr> <td>危险驾驶</td> <td>-6</td></tr><tr> <td>未关闭用电设备车门车窗</td> <td>-6</td></tr><tr> <td>拒单</td> <td>-6</td></tr><tr> <td>挑单</td> <td>-6</td></tr><tr> <td>故意拖延</td> <td>-6</td></tr><tr> <td>未主动给客户展示里程表</td> <td>-3</td></tr><tr> <td>绕路导致客户多收费</td> <td>-6</td></tr><tr> <td>客户有VIP余额、电子优惠劵不主动为客户抵扣</td> <td>-6</td></tr><tr> <td>单方事故</td> <td>-9</td></tr><tr> <td>中途拒驾</td> <td>-12</td></tr><tr> <td>在其他代驾公司兼职</td> <td>-12</td></tr><tr> <td>委托接单</td> <td>-9</td></tr><tr> <td>酒后代驾</td> <td>-12</td></tr><tr> <td>辱骂、肢体冲突</td> <td>-12</td></tr> </tbody><tbody> </tbody></table> </div></div></div></div>
+            <!--在线报名-->
+            <div class="col-container" id="applyCol" style="display: none;" data-col-id="3">
+                <div class="signup-content">
+                    <!--<form id="driver-zhaopin-form">
+                -->
+                    <!--<form id="driver-zhaopin-form" action="" method="">
+                -->
+                    <div id="driverinfo" class="driverinfo">
+                        <div class="recurit-steps-header">
+                            <ul class="steps clearfix">
+                                <li class="step active">
+                                    <span class="serial">
+                                        <span class="num">1</span>
+                                    </span>
+                                    <p class="txt">填写报名信息</p>
+                                </li>
+                                <li class="step">
+                                    <span class="serial">
+                                        <span class="num">2</span>
+                                    </span>
+                                    <p class="txt">预约路考</p>
+                                </li>
+                                <li class="step last">
+                                    <span class="serial">
+                                        <span class="num">3</span>
+                                    </span>
+                                    <p class="txt">关注微信公众号</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="notice-con">
+                            <h2 class="apply-warn">报名须知：</h2>
+                            <p>1.报名信息必须真实有效，且您的驾龄必须已满5年；</p>
+                            <p>2.确认自愿使用平台信息服务；</p>
+                            <p>3.确认有以下证件：身份证、驾驶证，非本地户口需提供暂住证或居住证；</p>
+                            <p><b>4.根据城市不同，同意在成功签约后从信息费账户扣缴报名注册费；</b></p>
+                            <p><b>5.当终止提供信息服务时，处理周期为 90 天；</b></p>
+                        </div>
+                        <div class="row-fluid">
+                            <h2 class="apply-info">报名信息：</h2>
+                            <!--姓名-->
+                            <div class="span4">
+                                <label class="required">
+                                    姓名
+                                    <span class="required">*</span>
+                                </label>
+                                <input maxlength="4" min="4" max="4" name="name" class="input-txt" id="v_name" type="text" value="">
+                            </div>
+                            <!--身份证号-->
+                            <div class="span4 fl5">
+                                <label class="required">
+                                    身份证
+                                    <span class="required">*</span>
+                                </label>
+                                <input maxlength="18" min="18" max="18" id="v_card" class="input-txt" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <!--手机-->
+                            <div class="span4">
+                                <label class="required">
+                                    手机号
+                                    <span class="required">*</span>
+                                </label>
+                                <input maxlength="11" min="11" max="11" name="mobile" class="input-txt" id="v_tel" type="text" value="">
+                            </div>
+                            <!--验证码-->
+                            <div class="span4 fl5" id="v-verifyCode">
+                                <label class="required">
+                                    手机验证码
+                                    <span class="required">*</span>
+                                </label>
+                                <input maxlength="6" min="6" max="6" name="mobilecode" class="input-txt" id="v_verifyCode" type="text" value="">
+                                <a class="btn-block not" id="get_code">获取验证码</a>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <!--驾照档案编号-->
+                            <div class="span4">
+                                <label class="required">
+                                    驾照档案编号
+                                    <span class="required">*</span>
+                                </label>
+                                <input id="v_code" type="text" maxlength="12" min="10" max="12" class="input-txt" value="">
+                            </div>
+                            <!--驾照申领日期-->
+                            <div class="span4 fl5">
+                                <label class="required">
+                                    驾照申领日期
+                                    <span class="required">*</span>
+                                </label>
+                                <select class="select-year" id="select-year" data-flag="false" data-reset="false">
+                                    <option value="-1" selected="selected">请选择</option>
+                                <option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option></select>
+                                <select class="select-month" id="select-month" data-flag="false" data-reset="false">
+                                    <option value="-1" selected="selected">请选择</option>
+                                    <option value="1">1月</option>
+                                    <option value="2">2月</option>
+                                    <option value="3">3月</option>
+                                    <option value="4">4月</option>
+                                    <option value="5">5月</option>
+                                    <option value="6">6月</option>
+                                    <option value="7">7月</option>
+                                    <option value="8">8月</option>
+                                    <option value="9">9月</option>
+                                    <option value="10">10月</option>
+                                    <option value="11">11月</option>
+                                    <option value="12">12月</option>
+                                </select>
+                                <input type="hidden" id="v_date" value="" class="hasDatepicker">
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <!--报名城市-->
+                            <div class="span4">
+                                <label class="required">
+                                    报名城市
+                                    <span class="required">*</span>
+                                </label>
+                                <input id="v_city" type="text" value="" class="input-txt" placeholder="请选择" >
+                            </div>
+                            <!--招聘信息来源-->
+                            <div class="span4 fl5">
+                                <label class="required">
+                                    招募信息来源
+                                    <span class="required">*</span>
+                                </label>
+                                <select name="src" id="v_src" class="v_src" data-reset="false">
+                                    <option value="-1" selected="selected">请选择</option>
+                                    <option value="3">58同城</option>
+                                    <option value="4">赶集</option>
+                                    <option value="5">微博</option>
+                                    <option value="6">朋友介绍</option>
+                                    <option value="7">电视/报纸</option>
+                                    <option value="8">其它(请举例)</option>
+                                </select>
+                                <input size="20" maxlength="20" style="display:none" name="recommender" placeholder="请输入朋友的起点出行工号" class="other_src" id="v_recommender_src" type="text">
+                                <input size="20" maxlength="20" style="display:none" name="other_src" placeholder="请输入代驾信息来源" class="other_src" id="v_other_src" type="text">
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <!--紧急联系人电话-->
+                            <div class="span4">
+                                <label class="required">
+                                    紧急联系人手机
+                                    <span class="required">*</span>
+                                </label>
+                                <input maxlength="11" min="11" max="11" id="v_contact_phone" class="input-txt" type="text" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="submit" class="submit">
+                        <!-- <span id="chk-span" class="no-chk"></span>
+                        <input type="checkbox" value="1" name="agree" id="agree" style="display:none" />
+                        <label for="agree">我已仔细阅读并同意</label>
+                        <a href="agreement.html" target="_blank" class="agreement-link">《信息技术服务协议》</a> -->
+                        <p>
+                            <a class="btn-block not" id="sub_btn">报 名</a>
+                        </p>
+                    </div>
+                    <!--</form>-->
+                </div>
+            </div>
+            <!--在线报名-->
+            <!--预约路考-->
+            <div class="col-container" style="display: none;" data-col-id="4" id="examCol">
+                <!-- <div class=" exam-content">
+                    <div class="row" style=" margin: 100px auto auto 280px;">
+                        <div class="span6">
+                            <form id="yw0">
+                                <label for="exam_id_card">请输入身份证号</label>
+                                <input type="text" id="exam_id_card" name="id_card" value="" style="float:left" maxlength="18" min="18" max="18"> &nbsp;
+                                <input id="start_exam" class="btn" type="button" name="yt0" value="开始考试">
+                            </form>
+                            <p>请阅读以下考试须知后，点击开始考试按钮进行考试。</br>
+                                1、本次考试共有考题20道，须全部答对后才算通过。
+                                </br>
+                                2、考试结束后，系统会告诉您考试结果。答错的题会告诉您正确答案。
+                                </br>
+                                3、如果考试没有通过，请继续学习培训资料，准备下次考试。
+                                </br>
+                                4、考试通过后，起点出行公司择时给您发面试通知短信，请注意查收，耐心等待。
+                            </p>
+                        </div>
+                        <input type="text" style="display:none;" id="id_cards" name="id_cards" value="1">
+                    </div>
+                </div>
+                <div class="success" style="display: none;">
+                    <h2>考试通过</h2>
+                    <p>
+                        恭喜您，你已通过在线考试，起点出行工作人员将在7个工作日内联系您参加面试，请注意 查收短信和电话，谢谢。
+                    </p>
+                </div>
+                <div class="failed" style="display: none;">
+                    <h2>对不起</h2>
+                    <p>您的考试未通过请重新参加考试</p>
+                </div> -->
+                <div class="road-test">
+                    <h3 class="title">
+                        <i class="icon-identity"></i>
+                        <span>身份验证：</span>
+                    </h3>
+                    <div class="road-test-bd">
+                        <span class="label-txt">身份证号</span>
+                        <input type="text" id="exam_id_card" name="id_card">
+                    </div>
+                    <div class="road-test-ft">
+                        <a href="javascript:" class="button disable" id="start_exam">确定</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--在线考试-->
+            <!--预约面试-->
+            <div class="col-container" style="display: none;" data-col-id="5">
+                <div class="query-city">
+                    <form class="form-inline">
+                        <select name="city_id" id="city_id">
+                            <option value="0" selected="selected">请选择城市</option>
+                        </select>
+                        <input type="hidden" name="act" value="interview">
+                        <input type="button" class="btn" value="查询" id="interview_btn" onclick="alert('没有可用预约时间，请联系当地司机管理部门。')">
+                    </form>
+                </div>
+            </div>
+            <!--预约面试-->
+            <!--报名查询-->
+            <div class="col-container" style="display: none;" data-col-id="6">
+                <div class="queue-content">
+                    <div class="road-test">
+                        <h3 class="title">
+                            <i class="icon-identity"></i>
+                            <span>身份验证：</span>
+                        </h3>
+                        <div class="road-test-bd">
+                            <span class="label-txt">身份证号</span>
+                            <input type="text" id="query_id_card" name="id_card">
+                        </div>
+                        <div class="road-test-ft">
+                            <a href="javascript:" class="button disable" id="query_btn" name="yt0">查询</a>
+                        </div>
+                    </div>
+                    <div class="query-result"></div>
+                </div>
+            </div>
+            <!--报名查询-->
+            <br style="clear:both;">
+        </div>
+        <!--尾部开始-->
+{dede:include filename="footer.htm"/}
+<!--尾部结束-->
+    <div class="winpop">
+        <a href="javascript:;" class="close">×</a>
+        <div class="con">
+            <p>【特别提示】</p>
+            <p>您在点击同意协议前，应当认真阅读以下协议。当您点击同意后，即表示您已充分阅读、理解并接受协议的全部内容。如您因平台信息服务与平台发生争议的，适用《用户使用规则》、《信息服务协议》处理。如您在使用平台服务过程中与代驾服务使用方用户发生争议的，依您与其达成的《代驾服务协议》以及《用户使用规则》处理。</p>
+            <p>
+            阅读协议的过程中，请您务必充分理解协议中相关条款内容，其中包括：</p>
+            <p>1、与您约定免除或限制责任的条款； <br>
+            2、与您约定法律适用和管辖的条款； <br>
+            3、其他有关权利义务的重要条款。 </p>
+            <p>
+            如果您不同意相关协议或其中任何条款约定，您应立即停止报名及使用。</p>
+            <p><a href="/userrule.html " target="_blank">《起点出行信息服务平台用户使用规则》 </a></p>
+            <p><a href="/edj-agreement.html " target="_blank">《代驾服务协议》 </a></p>
+            <p><a href="/agreement.html " target="_blank">《信息服务协议》 </a></p>
+        </div>
+        <div id="submit" class="submit">
+            <p>
+                <a href="javascript:;" class="btn-block not" id="agreement">同意协议</a>
+            </p>
+        </div>
+
+    </div>
+    <div class="mask"></div>
+
+    <script language="javascript" type="text/javascript">
+            //$("#agree").removeAttr("checked");
+            function getKey() {
+                var tt = Date.parse(new Date());
+                return tt + Math.ceil(Math.random() * 100000)
+            }
+            var keyGlobal = getKey();
+            var kk = Common.getCode(keyGlobal);
+            $('#yw1').attr('src', kk);
+            jQuery(document).on('click', '#yw1_button', function() {
+                keyGlobal = getKey();
+                kk = Common.getCode(keyGlobal);
+                $('#yw1').attr('src', kk);
+            });
+
+            $("#agree").removeAttr("checked").on("change", function() {
+                if ($(this).attr("checked")) {
+                    $("#sub_btn").addClass("not");
+                } else {
+                    $("#sub_btn").removeClass("not");
+                }
+            })
+            var province = {
+                "citylist": ["北京", "天津", "河北", "山西", "内蒙古", "辽宁", "吉林", "黑龙江", "上海", "江苏", "浙江", "安徽", "福建", "江西", "山东", "河南", "湖北", "湖南", "广东", "广西", "海南", "重庆", "四川", "贵州", "云南", "西藏", "陕西", "甘肃", "青海", "宁夏", "新疆", "香港", "澳门", "台湾"]
+            };
+
+            $.when(Common.getTemplate("templates/provinceList.temp")).then(function(t) {
+                if (t == "") {
+                    return false;
+                }
+                var lCities = doT.template(t);
+                $("#s1").html(lCities(province));
+
+                $("#s1").change(function() {
+                    var dd = $("#s1").val();
+                    if (dd == "请选择") {
+                        return
+                    }
+                    var mCityList = {
+                        method: "driver.signup.citylist",
+                        params: {
+                            province: dd
+                        }
+                    }
+                    $.when(Common.getRequest(mCityList)).then(function(data) {
+                        if (CU.isSucceed(data)) {
+                            lCities = doT.template(t);
+                            $("#s2").html(lCities(data));
+                        }
+                    })
+                });
+            });
+
+            //初始化年份
+            var dateObj = new Date();
+            var curYear = dateObj.getFullYear();
+            var startY = 1980,
+                endY = curYear - 5;
+
+            var optionStrs = '';
+            for (var i = endY; i >= startY; i--) {
+                optionStrs += '<option value="' + i + '">' + i + '</option>';
+            }
+            $('#select-year').append(optionStrs);
+
+            //checkbox 模拟
+            $('#chk-span').bind("click", function() {
+                $('#agree').click();
+            });
+            $('#agree').bind("change", function() {
+                if ($(this).is(':checked')) {
+                    $('#chk-span').addClass('chk-ok');
+                } else {
+                    $('#chk-span').removeClass('chk-ok');
+                }
+            });
+
+            var yearV = $('#select-year').val(),
+                monthV = $('#select-month').val(),
+                dateV = '';
+
+            $('#v_date').val("");
+            //驾照时间
+            $('.span4').delegate('select', 'change', function() {
+                var item = $(this);
+                var itemId = item.attr('id');
+                var resetV = $(this).attr("data-reset");
+
+                if (itemId != "v_src") {
+                    item.attr("data-flag", "true");
+                    var errTip = $('#err-tip-date');
+                    if (itemId == 'select-year') {
+                        yearV = item.val();
+                    } else if (itemId == 'select-month') {
+                        monthV = item.val();
+                    }
+                    if (yearV != '-1' && monthV != '-1') {
+                        dateV = yearV + '-' + monthV;
+                    } else {
+                        dateV = '';
+                    }
+
+                    $('#v_date').val(dateV);
+                    var yearFlag = $('#select-year').attr("data-flag");
+                    var monthFlag = $('#select-month').attr("data-flag");
+                    if (dateV == '' && yearFlag == "true" && monthFlag == "true" && resetV == "false") {
+                        if (errTip[0]) {
+                            return;
+                        }
+                        showTip("请选择申领日期", $("#v_date"), "date");
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+                    }
+                }
+            });
+
+            var showTip = function(msg, el, type) {
+                var parentDom = el.parent('.span4');
+                var errTip = parentDom.find('#err-tip-' + type);
+                if (errTip[0]) {
+                    return;
+                }
+                var tipSpan = '<span class="err-tip" id="err-tip-' + type + '">' + msg + '</span>';
+                parentDom.append(tipSpan);
+            }
+
+
+            var verify = {
+                tel: /^[1][34578]\d{9}$/,
+                code: /^[A-Za-z0-9]+$/,
+                number: /^[0-9]*$/,
+                card: /^([1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3})|([1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])(\d{3}[\d|x|X]{1}))$/,
+                text: /^[A-Za-z0-9\u4e00-\u9fa5]+$/,
+                name: /[\u4e00-\u9fa5]+/
+            }
+
+            var obj = {};
+            obj.originCityName = '';
+            obj.originCityId = '0';
+
+            //未填写，直接点击报名按钮
+            var isNull = function() {
+
+                obj.name = $.trim($("#v_name").val());
+                obj.tel = $.trim($("#v_tel").val());
+                obj.card = $.trim($("#v_card").val());
+                obj.code = $.trim($("#v_code").val());
+                obj.date = $.trim($("#v_date").val());
+                obj.fee_id = $.trim($("#v_city").attr("data-fee_id"));
+                obj.fee_name = $.trim($("#v_city").val());
+                obj.src = $.trim($("#v_src").val());
+                obj.verifyCode = $.trim($('#v_verifyCode').val());
+                obj.contactTel = $.trim($('#v_contact_phone').val());
+
+                if (!verify.name.test(obj.name)) {
+                    showTip("请输入正确的姓名", $("#v_name"), "name");
+                    return false;
+                }
+
+                if (!verify.tel.test(obj.tel)) {
+                    showTip("请输入正确的手机号", $("#v_tel"), "tel");
+                    return false;
+                }
+
+                if (!verify.card.test(obj.card)) {
+                    showTip("请输入正确的身份证号码", $("#v_card"), "card");
+                    return false;
+                }
+                if (!verify.number.test(obj.code) || obj.code == "") {
+                    showTip("请输入正确的驾驶档案编号", $("#v_code"), "code");
+                    return false;
+                }
+
+                if (obj.date == '') {
+                    showTip("请选择申领日期", $("#v_date"), "date");
+                    return false;
+                }
+
+                if (obj.fee_id == '-1') {
+                    showTip("请选择城市", $("#v_city"), "city");
+                    return false;
+                }
+
+                if (obj.src == '-1') {
+                    showTip("请选择招募信息来源", $("#v_src"), "src");
+                    return false;
+                }
+
+                if (obj.src == '6') {
+                    obj.recommender = $.trim($('#v_recommender_src').val().replace(/\s/g, ""));
+                    if (obj.recommender == "" || !verify.text.test(obj.recommender)) {
+                        showTip("请输入朋友的起点出行工号", $("#v_recommender_src"), "recommender");
+                        return false;
+                    }
+                }
+
+                if (obj.src == '8') {
+                    obj.other = $.trim($('#v_other_src').val());
+                    if (obj.other == "") {
+                        showTip("请输入招募信息来源", $("#v_other_src"), "other");
+                        return false;
+                    }
+                }
+
+                if (!verify.tel.test(obj.contactTel)) {
+                    showTip("请输入正确的手机号", $("#v_contact_phone"), "contact");
+                    return false;
+                }
+
+                if (obj.verifyCode == "") {
+                    showTip("请输入验证码", $("#v_verifyCode"), "verifyCode");
+                    return false;
+                }
+
+                return true;
+            }
+
+            //填写后，blur看是否符合正则
+            var verifyFn = function(type, el) {
+
+                var errTip = $('#err-tip-' + type);
+                if (type != 'city') {
+                    obj[type] = $.trim(el.val());
+                }
+
+                if (type == "name") {
+                    if (!verify.text.test(obj.name)) {
+                        showTip("请输入正确的姓名", el, type);
+
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+
+                    }
+                } else if (type == "tel") {
+                    if (!verify.tel.test(obj.tel)) {
+                        showTip("请输入正确的手机号", el, type);
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+
+                    }
+                } else if (type == "card") {
+                    if (!verify.card.test(obj.card)) {
+                        showTip("请输入正确的身份证号码", el, type);
+
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+
+                    }
+                } else if (type == "code") {
+                    if (!verify.number.test(obj.code) || obj.code == "") {
+                        showTip("请输入正确的驾驶档案编号", el, type);
+
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+
+                    }
+                } else if (type == "date") {
+                    if (obj.date == "") {
+                        showTip("请选择驾照申领日期", el, type);
+
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+
+                    }
+                } else if (type == "city") {
+                    obj.fee_id = el.attr("data-fee_id");
+                    if (obj.fee_id == "-1") {
+                        showTip("请选择城市", el, type);
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+                    }
+                } else if (type == "recommender") {
+                    obj.recommender = $.trim(el.val()).replace(/\s/g, ""); //去掉里边的空格
+                    if (obj.recommender == "" || !verify.text.test(obj.recommender)) {
+                        showTip("请输入正确的起点出行工号", el, type);
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+                    }
+                } else if (type == "other") {
+                    if (obj.other == "") {
+                        showTip("请输入招募信息来源", el, type);
+
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+
+                    }
+                } else if (type == "contact") {
+                    if (!verify.tel.test(obj.contact)) {
+                        showTip("请输入正确的手机号", el, type);
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+                    }
+                } else if (type == "verifyCode") {
+                    if (obj.verifyCode == null || obj.verifyCode.length < 0 || !verify.code.test(obj.verifyCode)) {
+                        showTip("请输入验证码", el, type);
+                    } else {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+                    }
+                }
+            }
+
+            //keyup时，实时去掉tip,和更改可提交状态
+            var verifyFn2 = function(type, el) {
+                var errTip = $('#err-tip-' + type);
+
+                if (type != 'city') {
+                    obj[type] = $.trim(el.val());
+                    if (obj[type] != "") {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+                    }
+                } else {
+                    obj.fee_id = el.attr("data-fee_id");
+                    if (obj.fee_id != "-1") {
+                        if (errTip[0]) {
+                            errTip.remove();
+                        }
+                    }
+                }
+            }
+
+            // $('#v_city').bind('keyup', function(){
+
+            // });
+            var canGetCode = true,
+                intvId = null,
+                oldTel = "",
+                newTel = "";
+            $('#driverinfo').delegate('input', 'blur', function() {
+                var el = $(this);
+                var type = el.attr("id").split('_')[1];
+                verifyFn(type, el);
+                if (type == "tel") {
+                    newTel = $.trim($(this).val());
+                    if (canGetCode) {
+                        if (verify.tel.test(newTel)) {
+                            $("#get_code").addClass("ws-blue");
+                        } else {
+                            $("#get_code").removeClass("ws-blue");
+                        }
+                    } else if (newTel != oldTel && verify.tel.test(newTel)) {
+                        oldTel = newTel;
+                        window.clearInterval(intvId);
+                        $("#get_code").addClass("ws-blue").html("获取验证码");
+                    }
+                }
+            }).delegate('#get_code', 'click', function() {
+                // 2015-07-01获取手机验证码
+                var selfBtn = $(this);
+                if (!canGetCode) {
+                    if (selfBtn.hasClass("ws-blue")) {
+                        alert("一分钟内只能请求获取一次验证码");
+                    }
+                    return false;
+                }
+                if (!selfBtn.hasClass("ws-blue")) {
+                    showTip("请输入正确的手机号", $("#v_tel"), "tel");
+                    return false;
+                }
+                var mGetCode = {
+                    method: "driver.signup.createverifycode",
+                    params: {
+                        mobile: $.trim($("#v_tel").val())
+                    }
+                }
+                canGetCode = false;
+                selfBtn.removeClass("ws-blue");
+                $.when(Common.getRequest(mGetCode)).then(function(data) {
+                    if (data.code == 0) {
+                        var sum = 60;
+                        intvId = window.setInterval(function() {
+                            if (sum > 0) {
+                                selfBtn.html("发送验证码" + sum + "s");
+                                sum--;
+                            } else {
+                                window.clearInterval(intvId);
+                                selfBtn.html("重新获取验证码");
+                                selfBtn.addClass("ws-blue");
+                                canGetCode = true;
+                            }
+                        }, 1000);
+                    }else{
+                        alert(data.message);
+                    }
+                });
+                window.setTimeout(function() {
+                    canGetCode = true;
+                }, 70000);
+            });
+
+            $('#driverinfo').delegate('input', 'keyup', function() {
+                var el = $(this);
+                var type = el.attr("id").split('_')[1];
+                verifyFn2(type, el);
+
+                if (type == "tel") {
+                    newTel = $.trim($(this).val());
+                    if (canGetCode) {
+                        if (verify.tel.test(newTel)) {
+                            $("#get_code").addClass("ws-blue");
+                        } else {
+                            $("#get_code").removeClass("ws-blue");
+                        }
+                    } else if (newTel != oldTel && verify.tel.test(newTel)) {
+                        oldTel = newTel;
+                        window.clearInterval(intvId);
+                        $("#get_code").addClass("ws-blue").html("获取验证码");
+                    }
+                }
+            });
+
+            var canSubmit = function() {
+                var isnull = isNull();
+                return isnull;
+            }
+
+            //获取用户当前城市
+            var getCurCity = {
+                method: "driver.signup.cityinfo"
+            }
+
+            $.when(Common.getRequest(getCurCity)).then(function(data) {
+
+                if (data != "") {
+
+                    $('#v_city').attr("data-fee_id", data.city_id);
+                    $('#v_city').val(data.city_name);
+                    obj.originCityId = data.city_id; //记录默认的当前城市id
+                    obj.originCityName = data.city_name;
+                }
+            });
+
+
+            var createPop = function(msg, type) {
+                var popMain = '<p class="mask-msg-' + type + '">' + msg + '</p>';
+                var domH = $(document).height();
+
+                $('#mask-main').append(popMain);
+                var scrollT = $(document).scrollTop();
+                var screenH = document.body.clientHeight;
+
+                $('#mask-main').css('top', (scrollT + screenH) / 2 + 'px');
+
+                $('#mask-bg').css('height', domH + 'px');
+
+                $('#mask-bg').css('display', 'block');
+
+                $('#mask-main').css('display', 'block');
+
+                setTimeout(function() {
+                    $('#mask-bg').css('display', 'none');
+                    $('#mask-main').css('display', 'none');
+                    var maskTxt = $('.mask-msg-' + type);
+                    maskTxt.remove();
+
+                    $('#driverinfo').find('select').each(function() {
+
+                        $(this).attr('data-reset', 'false');
+
+                    });
+                }, 1500);
+            }
+
+            var doApm = function(params) {
+                params = params || {};
+                var id_card = params.id_card,
+                    city_id = params.city_id,
+                    apmData = null,
+                    selectedChk = -1;
+                apiUrl = "http://api.edaijia.cc/rest/";
+                if (location.href.indexOf("www.edaijia.cn") > -1) {
+                    apiUrl = "http://api.edaijia.cn/rest/";
+                } else if (location.href.indexOf("www.d.edaijia.cn") > -1) {
+                    apiUrl = "http://api.d.edaijia.cn/rest/";
+                } else if (location.href.indexOf("www.d2.edaijia.cn") > -1) {
+                    apiUrl = "http://api.d2.edaijia.cn/rest/";
+                } else {
+                    apiUrl = "http://api.edaijia.cc/rest/";
+                }
+                var canApm = true;
+                $("body").delegate("td.yes-apm", "click", function() {
+                    var self = $(this);
+                    $("#apm_now").removeClass("ws-disabled").html("预约");
+                    self.addClass("select");
+                    self.siblings("td.yes-apm").removeClass("select");
+                    self.parent().siblings().find("td.yes-apm").removeClass("select");
+                }).delegate("#apm_now", "click", function() {
+                    var self_btn = $(this);
+                    if (canApm && !self_btn.hasClass("ws-disabled")) {
+                        var apmtable = $("table.ws-active-table");
+                        var _fullDate = apmtable.find("td.select").siblings("td.apm-date").attr("data-fulldate").trim(),
+                            _hour = apmtable.find("td.select").index();
+                        var mColabinding = {
+                            method: "driver.booking.book",
+                            params: {
+                                "district_id": self_btn.attr("data-district_id"),
+                                "url": apiUrl,
+                                "method": "driver.booking.book",
+                                "id_card": id_card,
+                                "city_id": city_id,
+                                "date": _fullDate,
+                                "hour": _hour
+                            }
+                        }
+                        canApm = false;
+                        self_btn.addClass("ws-disabled")
+                        $.when(Common.postReqUrl(mColabinding)).then(function(data) {
+                            window.setTimeout(function() {
+                                canApm = true;
+                            }, 3000);
+                            if (data.code == 0) {
+                                // jClose();
+                                // jDialog(easyTemplate("confirmTmpl").toString(), "<span class='title_txt'>预约路考</span><span class='close'>x</span>", function(status) {}, true);
+                                $('#examCol').html(easyTemplate("confirmTmpl").toString());
+                            } else {
+                                //jClose();
+                                alert(data.message);
+                            }
+                        });
+                        window.setTimeout(function() {
+                            canApm = true;
+                        }, 5000);
+                    }
+                    return false;
+                }).delegate(".ws-pos-list li", "click", function() {
+                    var self = $(this),
+                        selfr = self.find("input[type='radio']");
+                    selfr.attr("checked", true);
+                    $("#apm_now").attr("data-district_id", selfr.val());
+                    selfr.parent("li").siblings().find("input").removeAttr("checked");
+                    if (self.parents(".section").length > 0) {
+                        var curId = selfr.val();
+                        if (selectedChk != curId) {
+                            selectedChk = curId;
+                            apmt = $("#apm-table-" + curId);
+                            apmt.siblings(".apm-table").removeClass("ws-active-table");
+                            apmt.addClass("ws-active-table");
+                            $("#apm_now").hasClass("ws-disabled") ? "" : $("#apm_now").addClass("ws-disabled");
+                        }
+                    } else {
+                        $("#choseSite").removeClass("ws-disabled");
+                    }
+                }).delegate(".close","click",function(){
+                    location.reload(true);
+                });
+
+                var mColabinding = {
+                    method: "driver.booking.month_status",
+                    params: {
+                        url: apiUrl,
+                        method: "driver.booking.month_status",
+                        id_card: id_card,
+                        "city_id": city_id
+                    }
+                }
+                $.when(Common.getReqUrl(mColabinding)).then(function(data) {
+                    data.city_name = params.fee_name;
+                    if (data.code == 0) {
+                        apmData = data;
+                        var _table = "";
+                        if(data.data.length > 1){
+                            _table = easyTemplate("siteTmpl", data).toString();
+                        }else{
+                            apmData.addressSelectedId = data.data[0].district_id;
+                            _table = easyTemplate("apmTmpl", apmData).toString();
+                        }
+                        // jDialog(_table, "<span class='title_txt'>预约路考</span><span class='close'>x</span>", function(status) {}, true);
+                        $('#examCol').html(_table);
+                        $("#choseSite").on("click", function() {
+                            if (!$(this).hasClass("ws-disabled")) {
+                                apmData.addressSelectedId = $(this).prev("ul").find('input:radio[name="site"]:checked').val();
+                                selectedChk = data.addressSelectedId;
+                                var _table = easyTemplate("apmTmpl", apmData).toString();
+                                // jDialog(_table, "<span class='title_txt'>预约路考</span><span class='close'>x</span>", function(status) {}, true);
+                                $('#examCol').html(_table)
+                            }
+                        })
+                    } else if (data.code == 1) {
+                        var _table = easyTemplate("confirmTmpl", data).toString();
+                        // jDialog(_table, "<span class='title_txt'>预约路考</span><span class='close'>x</span>", function(status) {}, true);
+                        $('#examCol').html(_table);
+                    } else {
+                        popbox.alert('提示', data.message);
+                    }
+                });
+            }
+            var bSubmit = true;
+            var realSubmit = function() {
+                var mSignup = {
+                    method: "driver.signup.signup",
+                    params: {
+                        agree: 1,
+                        name: obj.name,
+                        mobile: obj.tel,
+                        id_card: obj.card,
+                        id_driver_card: obj.code,
+                        driver_year: obj.date,
+                        city_id: obj.fee_id,
+                        fee_name: obj.fee_name,
+                        city_name: obj.fee_name,
+                        src: obj.src,
+                        other_src: obj.other,
+                        verifyCode: obj.verifyCode,
+                        recommender: obj.recommender,
+                        contact_phone: obj.contactTel,
+                        signup_src: 0,
+                        key: keyGlobal
+                    }
+                }
+                bSubmit = false;
+                $.when(Common.getRequest(mSignup)).then(function(data) {
+                    keyGlobal = getKey();
+                    kk = Common.getCode(keyGlobal);
+                    $('#yw1').attr('src', kk);
+                    window.setTimeout(function() {
+                        bSubmit = true;
+                    }, 3000);
+                    if (data.code == "0") {
+
+                        obj.id = data.id;
+
+                        //全部重置
+                        $('#driverinfo').find('input').each(function() {
+                            $(this).val('');
+                        });
+
+                        //城市恢复默认取得的
+                        $('#v_city').val(obj.originCityName);
+                        $('#v_city').attr("data-fee_id", obj.originCityId);
+
+                        $('#driverinfo').find('select').each(function() {
+                            $(this).get(0).selectedIndex = 0;
+
+                            $(this).attr('data-reset', 'true');
+
+                            $(this).change();
+
+                            //日期的data-flag为false
+                            $(this).attr('data-flag', 'false');
+                        });
+
+                        //$('#agree').click();
+                        doApm(mSignup.params);
+                        $('#examLink').trigger('click');
+                        $('#examCol').html('');
+                        $winpop.hide();
+                        $mask.hide();
+                    } else {
+                        createPop(data.message, 'err');
+                    }
+                });
+                window.setTimeout(function() {
+                    bSubmit = true;
+                }, 5000);
+                return false;
+            }
+            var $winpop = $('div.winpop'),
+                $mask = $('div.mask');
+            function submitFn() {
+                if (!bSubmit) {
+                    return false;
+                }
+                if (!$("#sub_btn").hasClass("not")) {
+                    return false;
+                }
+                var isCan = canSubmit();
+
+                if (isCan) {
+                    //判断年龄是否符合18-60之间
+                    var cardV = $('#v_card').val();
+                    var yearV, ageV, dateObj;
+
+                    dateObj = new Date().getFullYear();
+                    yearV = cardV.substring(6, 10);
+                    ageV = dateObj - yearV;
+
+                    if (ageV > 60 || ageV < 18) {
+                        createPop("您的年龄不符合要求", "err");
+                    } else{
+                        // update 协议改为弹出窗口形式 2015-08-03 by wangyanhong
+                        $winpop.show();
+                        $mask.css('height',document.body.scrollHeight).show();
+                    }
+                }
+                // $winpop.show();
+                // $mask.css('height',document.body.scrollHeight).show();
+                return false;
+            }
+
+            $('#sub_btn').click(function(e) {
+                e.preventDefault();
+                if (!bSubmit) {
+                    return false;
+                }
+                submitFn();
+            });
+            // 弹出窗口中的同意协议后提交内容
+            $('#agreement').on('click', function(e){
+                e.preventDefault();
+                if (!bSubmit) {
+                    return false;
+                }
+                //提交
+                realSubmit();
+                return false;
+            });
+            $('a.close').on('click', function(e){
+                e.preventDefault();
+                $winpop.hide();
+                $mask.hide();
+            });
+
+            $(window).keydown(function(event) {
+                if (event.keyCode == 13) {
+                    return false
+                }
+            });
+            </script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    $(function($) {
+        var verify = {
+            tel: /^[1][34578]\d{9}$/,
+
+            card: /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/,
+            text: /^[A-Za-z0-9\u4e00-\u9fa5]+$/
+        };
+
+        $("#query_id_card").on('input', function() {
+            if(verify.card.test($.trim($(this).val()))) {
+                $("#query_btn").removeClass('disable');
+            } else {
+                $("#query_btn").addClass('disable');
+            }
+        })
+
+        $("#query_btn").on("click", function() {
+            if($(this).hasClass('disable')) return;
+            var id = $.trim($("#query_id_card").val());
+            if (!verify.card.test(id)) {
+                popbox.alert('提示', "请输入正确的身份证号码");
+                return;
+            }
+
+            var mResult = {
+                method: "open.site.queue",
+                params: {
+                    id_card: id
+                }
+            }
+            $.when(Common.getRequest(mResult)).then(function(str) {
+                if (str.code == 0) {
+                    var result = str;
+                    $.when(Common.getTemplate("templates/queryResult.temp")).then(function(t) {
+                        if (t == "") {
+                            return;
+                        }
+                        var lResult = doT.template(t);
+                        $(".query-result").empty().append(lResult((result)));
+                    });
+                } else {
+                    popbox.alert('提示',"您还没有报名，请先报名。")
+                    $(".query-result").empty();
+                }
+            });
+        });
+        $("#exam_id_card").on('input', function() {
+            if(verify.card.test($.trim($(this).val()))) {
+                $("#start_exam").removeClass('disable');
+            } else {
+                $("#start_exam").addClass('disable');
+            }
+        });
+
+        $("#start_exam").on("click", function() {
+            if($(this).hasClass('disable')) return;
+
+            var id_card = $.trim($("#exam_id_card").val());
+
+            if (!verify.card.test(id_card)) {
+                popbox.alert('提示','请输入正确的身份证号码');
+                return false;
+            }
+            var mExam = {
+                method: "driver.signup.exam",
+                params: {
+                    "id_card": id_card
+                }
+            }
+            //$("#exam_id_card").val("");
+            //$(this).addClass('disable');
+            var wrongResult = 0;
+            $.when(Common.getRequest(mExam)).then(function(str) {
+                if (str.code == 0) {
+
+                    questions = str.data; //限制一下考试数量
+                    //questions = str.data.slice(0,2); //截取前两个
+
+                    $.when(Common.getTemplate("templates/exam.temp")).then(function(t) {
+                        if (t == "") {
+                            return false;
+                        }
+
+                        var lQuestions = doT.template(t);
+                        $(".exam-content").parent().remove(".questions-container").append(lQuestions(questionsSerialize(questions)));
+                        $(".questions-container").data("id_card", id_card);
+                        addExamEvent();
+                    });
+                } else if (str.code == 3) { // 已预约
+                    var $popbox = popbox.alert('提示', '<p>您已预约了起点出行' + str.data.city_name + '分公司 '  + str.data.date + '的路考</p><p>路考地点见预约成功通知短信<a href="javascript:" class="btn re-sms-btn">重发短信</a></p>'
+                    );
+                    $popbox.find('.re-sms-btn').on('click', function() {
+                        if($(this).hasClass('disable')) return;
+                        $(this).addClass('disable');
+
+                        var paramsObj = {
+                            method: "driver.booking.bookresentsms",
+                            params: {
+                                "id_card": id_card
+                            }
+                        }
+
+                        var $self = $(this);
+
+                        Common.getRequest(paramsObj).done(function(ret) {
+                            if(ret.code === 1) {
+                                $self.text('发送成功');
+                            } else {
+                                alert(ret.message);
+                                $self.removeClass('disable');
+                            }
+                        }).fail(function() {
+                            alert('网络请求错误，请稍后重试');
+                            $self.removeClass('disable');
+                        })
+
+                    })
+
+                } else if (str.code == 4) { // 未预约
+                    doApm({
+                        id_card: str.id_card,
+                        city_id: str.data.city_id,
+                        fee_name: str.data.city_name
+                    });
+                } else {
+                    if(str.message === '您还没有报名,请先报名') {
+                        var redirectTimer;
+                        var remainStart = 5;
+                        var $popbox = popbox.alert({
+                            title: '您还没有报名，请先在线报名',
+                            content: '<span class="redirect-remain-sec" id="redirectRemainSec">5秒</span>后自动跳转到在线报名页面',
+                            btns: [
+                                {
+                                    className: '',
+                                    text: '立即跳转'
+                                }
+                            ],
+                            hasClose: true,
+                            close: function() {
+                                redirectTimer && clearTimeout(redirectTimer);
+                            },
+                            btnFn: function() {
+                                redirectTimer && clearTimeout(redirectTimer);
+                                location.href = location.href.split('?')[0] + '?3';
+                            }
+                        });
+
+                        var countDown = function() {
+                            if(remainStart === 0) {
+                                $popbox.remove();
+                                location.href = location.href.split('?')[0] + '?3';
+                                return;
+                            }
+                            remainStart --;
+                            $('#redirectRemainSec').text(remainStart + '秒');
+                            redirectTimer = setTimeout(countDown, 1000);
+                        }
+
+                        redirectTimer = setTimeout(countDown, 1000);
+
+                        return;
+                    }
+                    popbox.alert('提示', str.message);
+                }
+            });
+            return false;
+        });
+        var customAnswers = [],
+            isExam = true,
+            _result = 0;
+
+        function addExamEvent() {
+            $(".exam-content").hide();
+            $(".questions-container").show();
+            var canSubmitExam = true;// 2015-07-27添加考试状态
+            $("#answers_submit").on("click", function() {
+                if(!canSubmitExam){
+                    return false;
+                }
+                wrongResult = 0;
+                _result = 0;
+                var $this = $(this);
+                var $questions = $(".questions-container");
+                var $parent = $questions.parent();
+                var card = $questions.data("id_card");
+                var qid = $questions.data("qid");
+
+                $(".question-container").each(checkAll);
+                if (isExam) {
+                    return
+                }
+
+                $("#answers_submit").unbind("click");
+                $(".question-container").each(checkAnswer);
+                if (!wrongResult) {
+                    var mExampass = {
+                        method: "driver.signup.exampass",
+                        params: {
+                            "id_card": card,
+                            "q_id": qid
+                        }
+                    }
+                    canSubmitExam = false;
+                    $.when(Common.getRequest(mExampass)).then(function(str) {
+
+                        window.setTimeout(function(){
+                            canSubmitExam = true;
+                        },3000);
+
+                        if (CU.isSucceed(str)) {
+                            $questions.remove();
+                            $parent.find(".success").show();
+                        }
+                    });
+
+                    window.setTimeout(function(){
+                        canSubmitExam = true;
+                    },5000);
+
+                } else {
+
+                    $parent.find(".failed").show();
+                    $("#answers_submit").text("重新考试").off("click").on("click", function() {
+                        location.href = "entry.html?4";
+                        $questions.remove();
+                        $parent.find(".failed").hide();
+                        $parent.find(".exam-content").show();
+                    });
+                }
+                return false;
+            });
+        }
+
+        function questionsSerialize(d) {
+
+            for (var i = 0; i < d.length; i++) {
+                var answers = {};
+                var answerLetter = "ABCDEFGHIGKLMNOPQRSTUVWXYZ";
+                for (var j = 0; j < d[i].contents.length; j++) {
+                    answers[answerLetter.substr(j, 1)] = d[i].contents[j];
+                }
+                d[i].contents = answers;
+            }
+            return d;
+        }
+
+        function checkAll() {
+            var $this = $(this),
+                name = $this.data("name"),
+                $answers = $(this).find("input[name='" + name + "']:checked");
+            if ($answers.length == 0) {
+                isExam = true;
+                alert("您有未完成的考题，请全部完成后提交");
+                return false;
+            } else {
+                _result++;
+            }
+            //        console.log(isExam,$answers.length,"_result",_result);
+            if (_result == 20) { //由20道改为2到，测试用
+                isExam = false;
+            }
+        }
+
+        function checkAnswer() {
+            var $this = $(this),
+                name = $this.data("name"),
+                $answers = $(this).find("input[name='" + name + "']:checked"),
+                answer = [];
+
+            $answers.each(function() {
+                answer.push($(this).val());
+            });
+            answer = answer.sort().join(",");
+
+            if ($this.data("answer").split(/,|，/).sort().join(",") == answer) {
+                $(this).hide();
+            } else {
+                wrongResult++
+                $this.find("input").hide();
+                var alertStr = '<p style="color:red;">正确答案：' + $this.data("answer") + '。 您的答案：' + answer + '</span>';
+                $this.append(alertStr);
+            }
+
+
+        }
+
+        $('#v_date').datepicker(jQuery.extend({
+            showMonthAfterYear: false
+        }, jQuery.datepicker.regional['zh'], {
+            yearRange: '1980:2010',
+            'dateFormat': 'yy-mm-dd',
+            defaultDate: '1980-01-01',
+            'showButtonPanel': false,
+            'changeYear': true,
+            'changeMonth': true
+        }));
+    });
+
+
+    $(function() {
+        $("#v_city").val("请选择");
+        $("#v_city").attr("data-fee_id", "-1");
+        SCity.init({
+            target: "#v_city",
+            method: "open.city.allcity",
+            callback: function(data) {
+                $('#v_city').blur(); //输入框失去焦点
+            }
+        });
+
+        $("#v_src").find("option:first-child").attr("selected", "selected");
+
+        $("#v_src").bind("change", function() {
+            var tt = $(this).attr("value");
+            var errTip = $('#err-tip-src');
+            var resetV = $(this).attr("data-reset");
+            if (tt == '6') {
+                $('#v_recommender_src').show();
+            } else {
+                $('#v_recommender_src').hide();
+                $('#v_recommender_src').val('');
+                if ($('#err-tip-recommender')[0]) {
+                    $('#err-tip-recommender').remove();
+                }
+            }
+
+            if (tt == '8') {
+                $("#v_other_src").show();
+            } else {
+                $("#v_other_src").hide();
+                $("#v_other_src").val('');
+                if ($('#err-tip-other')[0]) {
+                    $('#err-tip-other').remove();
+                }
+            }
+
+            if (tt == '-1' && resetV == "false") {
+                if (errTip[0]) {
+                    return;
+                }
+                showTip("请选择招募信息来源", $('#v_src'), "src");
+            } else {
+                if (errTip[0]) {
+                    errTip.remove();
+                }
+            }
+        });
+    });
+
+    /*]]>*/
+    </script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/edj-widget-citybox.js"></script>
+    <div id="mask-bg" class="mask-bg"></div>
+    <div id="mask-main" class="mask-main"></div>
+    <script id="siteTmpl" type="text/x-easy-template">
+        <div class="pre-order-flow">
+            <div class="recurit-steps-header">
+                <ul class="steps clearfix">
+                    <li class="step">
+                        <span class="serial">
+                            <span class="num">1</span>
+                        </span>
+                        <p class="txt">填写报名信息</p>
+                    </li>
+                    <li class="step active">
+                        <span class="serial">
+                            <span class="num">2</span>
+                        </span>
+                        <p class="txt">预约路考</p>
+                    </li>
+                    <li class="step last">
+                        <span class="serial">
+                            <span class="num">3</span>
+                        </span>
+                        <p class="txt">关注微信公众号</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bd">
+                <div class="ws-pos-info">
+                    <div class="ws-pos-title bold">
+                        <img src="img/pos.png" />
+                        <span>请选择路考地点</span>
+                    </div>
+                    <ul class="ws-pos-list">
+                        <#if (data.data.length> 0)>
+                            <#list data.data as list>
+                                <li>
+                                    <input name="site" type="radio" value="${list.district_id}" />
+                                    <span>${list.district_name}</span>
+                                </li>
+                            </#list>
+                        </#if>
+                    </ul>
+                    <a class="button ws-disabled" href="javascript:void(0)" id="choseSite">下一步</a>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="apmTmpl" type="text/x-easy-template">
+        <div class="pre-order-flow">
+            <div class="recurit-steps-header">
+                <ul class="steps clearfix">
+                    <li class="step">
+                        <span class="serial">
+                            <span class="num">1</span>
+                        </span>
+                        <p class="txt">填写报名信息</p>
+                    </li>
+                    <li class="step active">
+                        <span class="serial">
+                            <span class="num">2</span>
+                        </span>
+                        <p class="txt">预约路考</p>
+                    </li>
+                    <li class="step last">
+                        <span class="serial">
+                            <span class="num">3</span>
+                        </span>
+                        <p class="txt">关注微信公众号</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bd">
+                <div class="section">
+                <#if (data.data.length> 1)>
+                    <div class="ws-pos-info">
+                        <div class="ws-pos-title bold">
+                            <img src="img/pos.png" />
+                            <span>请选择路考地点</span>
+                        </div>
+                        <ul class="ws-pos-list">
+                            <#if (data.data.length> 0)>
+                                <#list data.data as list>
+                                    <#if (list.district_id==data.addressSelectedId)>
+                                        <li>
+                                            <input name="site" type="radio" checked="checked" value="${list.district_id}" />
+                                            <span>${list.district_name}</span>
+                                        </li>
+                                        <#else>
+                                            <li>
+                                                <input name="site" type="radio" value="${list.district_id}" />
+                                                <span>${list.district_name}</span>
+                                            </li>
+                                    </#if>
+                                </#list>
+                            </#if>
+                        </ul>
+                    </div>
+                    <div class="ws-pos-title ws-pos-time bold">
+                        <img src="img/time.png" />
+                        <span>请选择路考时间</span>
+                    </div>
+                </#if>
+                <div style="margin-bottom:0;">您正在预约起点出行${data.city_name}分公司的路考，可预约最近1个月空闲的时段。请选择：</div>
+                <#if (data.data.length> 0)>
+                    <#list data.data as plist>
+                        <#if (plist.district_id==data.addressSelectedId)>
+                            <table class="apm-table ws-active-table" id="apm-table-${plist.district_id}" data-district_id='${plist.district_id}' width="100%" cellspacing="0" cellpadding="0" border="1" bgcolor="#fff">
+                                <#else>
+                                    <table class="apm-table" id="apm-table-${plist.district_id}" data-district_id='${plist.district_id}' width="100%" cellspacing="0" cellpadding="0" border="1" bgcolor="#fff">
+                        </#if>
+                        <thead>
+                            <tr>
+                                <th>日期</th>
+                                <#if (plist.district_data.length> 0)>
+                                    <#list plist.district_data[0].timeStatus as list>
+                                        <th>${list.time}</th>
+                                    </#list>
+                                </#if>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <#if (plist.district_data.length> 0)>
+                                <#list plist.district_data as list>
+                                    <tr>
+                                        <td class="apm-date" data-fulldate="${list.fullDate}">${list.date}</td>
+                                        <#if (list.timeStatus.length> 0)>
+                                            <#list list.timeStatus as slist>
+                                                <#if (slist.apm> 0)>
+                                                    <td class="yes-apm">可约</td>
+                                                <#elseif (slist.apm === -1)>
+                                                    <td class="full">未开放</td>
+                                                <#else>
+                                                    <td class="full">已约满</td>
+                                                </#if>
+                                            </#list>
+                                        </#if>
+                                    </tr>
+                                </#list>
+                            </#if>
+                        </tbody>
+                        </table>
+                    </#list>
+                </#if>
+            </div>
+            <div class="btn-wrap">
+                <a id="apm_now" data-district_id="${data.addressSelectedId}" href="javascript:void(0)" class="button ws-disabled overall">选择预约时间</a>
+            </div>
+            </div>
+        </div>
+    </script>
+    <script id="confirmTmpl" type="text/x-easy-template">
+        <div class="pre-order-flow">
+            <div class="recurit-steps-header">
+                <ul class="steps clearfix">
+                    <li class="step">
+                        <span class="serial">
+                            <span class="num">1</span>
+                        </span>
+                        <p class="txt">填写报名信息</p>
+                    </li>
+                    <li class="step">
+                        <span class="serial">
+                            <span class="num">2</span>
+                        </span>
+                        <p class="txt">预约路考</p>
+                    </li>
+                    <li class="step last active">
+                        <span class="serial">
+                            <span class="num">3</span>
+                        </span>
+                        <p class="txt">关注微信公众号</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bd">
+                <div class="weixin-follow">
+                    <h3 class="title">
+                        <i class="icon icon-done"></i>
+                        <span>预约完成,恭喜报名成功!</span>
+                    </h3>
+                    <div class="wx-follow-content">
+                        <p class="hd">
+                            <i class="icon icon-wx"></i>
+                            <span>请关注微信“edaijiacs”公众号:</span>
+                        </p>
+                        <p class="text">微信关注公众号,可随时获取最新通知信息、查看培训资料</p>
+                        <div class="wx-follow-guide">
+                            <div class="wx-qr">
+                                <img src="img/driver-recruit/wx_qr20151026.png" width="250">
+                                <p>打开微信后,点击“发现”/“扫一扫”</p>
+                            </div>
+                            <div class="wx-scan-sreenshot">
+                                <img src="img/driver-recruit/wx_scan_screenshot.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

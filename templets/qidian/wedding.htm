@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta charset="UTF-8">
+<title>起点出行 - 婚庆代驾申请</title>
+      <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/js/jquery-ui/smoothness-jquery-ui.min.css">
+    <link href="{dede:global.cfg_templets_skin/}/css/main.css?2.0.2" type="text/css" rel='stylesheet' />
+    <link href="{dede:global.cfg_templets_skin/}/css/entry.css?2.0.2" type="text/css" rel='stylesheet' />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/bootstrap-ie6.css">
+    <![endif]-->
+    <link href="{dede:global.cfg_templets_skin/}/css/edj-widget-citybox.css" type="text/css" rel='stylesheet' />
+    <link href="{dede:global.cfg_templets_skin/}/css/style.css" type="text/css" rel='stylesheet' />
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/doT.min.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.8.3.min.js"></script>
+  
+    
+
+ 
+</head>
+<body>
+<div class="header-container wedding-banner">
+  <div class="top-nav">
+    <div class="nav-content">
+     <!--头部开始-->
+{dede:include filename="header.htm"/}
+<!--头部结束-->
+    </div>
+  </div>
+
+</div>
+<div class="content-container secondary">
+<div class="tile-basic wedding">
+  <div class="col-container">
+    <div class=" block clearfix form-horizontal wedding-content">
+
+
+<script type="text/javascript">
+
+window.onload=function yzm(){
+  var m=Math.floor(Math.random()*10000);
+  document.getElementById("yzm").innerHTML=m;
+}
+</script>
+
+<script type="text/javascript">
+function click_form(){
+  if(document.getElementById('wname').value==""){
+  alert("姓名不能为空！");
+}else if(document.getElementById('wphone').value==""){
+alert("手机号不能为空！");
+}else if(document.getElementById('wlx').value==""){
+alert("宴会类型不能为空！");
+}else if(document.getElementById('wtime').value==""){
+alert("宴会时间不能为空！");
+}else if(document.getElementById('wcity').value==""){
+alert("城市不能为空！");
+
+}else if(document.getElementById('wjd').value==""){
+alert("城市不能为空！");
+
+}else if(document.getElementById('wdd').value==""){
+alert("城市不能为空！");
+
+}else if(document.getElementById('wpo').value==""){
+alert("城市不能为空！");
+
+}else if(document.getElementById('wnr').value==""){
+alert("城市不能为空！");
+
+}
+
+else if(document.getElementById("vcode").value!=document.getElementById("yzm").innerHTML){
+
+alert("验证码错误！");
+}else{
+document.getElementById("wedding-apply-form").action="/qidian/plus/diy.php";
+document.getElementById("wedding-apply-form").submit();
+
+
+}
+
+
+
+}
+</script>
+
+
+      <div class="container-fluid">
+        <div class="span7"  style="_float: left;">
+          <form id="wedding-apply-form" action="" enctype="multipart/form-data" method="post">
+          <input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="2" />
+<input type="hidden" name="do" value="2" />
+
+            <div class="control-group">
+              <label class="control-label required" for="WeddingApply_name"><span style="color:red;">*</span> 申请人姓名</label>
+
+              <div class="controls">
+                <input class="input-xlarge info" placeholder="申请人姓名" name="wname" id="wname" type="text" maxlength="4" min="4" max="4"/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label required" for="WeddingApply_phone"><span style="color:red;">*</span> 联系电话</label>
+
+              <div class="controls">
+                <input class="input-xlarge info" placeholder="手机号" name="wphone" id="wphone" type="text" maxlength="11" min="11" max="11"/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label required" ><span style="color:red;">*</span> 宴会类型</label>
+
+              <div class="controls">
+                <select class="info" name="wlx" id="wedding_type">
+                  <option value="0">婚宴</option>
+                  <option value="1">酒会</option>
+                  <option value="2">其他</option>
+                </select></div>
+            </div>
+            <div class="control-group">
+              <label class="control-label required" for="WeddingApply_run_time"><span style="color:red;">*</span> 宴会举办日期</label>
+
+              <div class="controls">
+                <input placeholder="选择宴会日期" class="input-xlarge info" id="wtime" name="wtime" type="text" />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label required" for="WeddingApply_city_id"><span style="color:red;">*</span> 城市</label>
+
+              <div class="controls">
+                  <input type="text" id="wcity" class="select_city input-xlarge info"  placeholder="城市" name="wcity" />
+                <!--<select class="info" name="city_id" id="WeddingApply_city_id">
+                  <option value="0">请选择城市</option>
+
+                </select>-->
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="WeddingApply_hotels"><span style="color:red;">*</span> 举办酒店</label>
+
+              <div class="controls">
+                <input class="input-xlarge info" placeholder="举办酒店" name="wjd" id="wjd" type="text" maxlength="10"/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label required" for="WeddingApply_detail_site"><span style="color:red;">*</span> 宴会详细地点</label>
+
+              <div class="controls">
+                <input class="input-xlarge info" placeholder="详细地址" name="wdd" id="wdd" type="text" maxlength="60"/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label required" for="WeddingApply_number"><span style="color:red;">*</span> 参加人数</label>
+
+              <div class="controls">
+                <input class="input-xlarge info" placeholder="参加人数" name="wpo" id="wpo" type="text" maxlength="4" min="2" max="4"/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label required" for="WeddingApply_mark"><span style="color:red;">*</span> 宴会流程、主要内容</label>
+
+              <div class="controls">
+                <textarea rows="4" class="input-xlarge info" placeholder="流程和主要内容" name="wnr" id="qnr" maxlength="100" ></textarea>
+              </div>
+            </div>
+            <div class="control-group">
+              <label for="WeddingApply_verifyCode" class="control-label required"><span style="color:red;">* </span>验证码</label>
+
+              <div class="controls">
+                  <input class="span4" maxlength="4" placeholder="验证码" name="verifyCode" id="WeddingApply_verifyCode" type="text" style="width:90px;"> <span id="yzm"></span> <a id="yw0_button">换一张</a>
+                  <input type="hidden" name="dede_fields" value="wname,text;wphone,text;wlx,select;wtime,text;wcity,text;wjd,text;wdd,text;wpo,text;wnr,multitext" />
+<input type="hidden" name="dede_fieldshash" value="1e3b192a47b832326a91225f130b6653" />
+              </div>
+              <label for="WeddingApply_verifyCode" class="control-label required"> </label>
+
+              <div class="controls">
+                <div style="color:red;display:none" class="errorMessage" id="WeddingApply_verifyCode_em_"></div>
+              </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label"> &nbsp;&nbsp;</label>
+              <div class="controls">
+                <a class="btn btn-primary btn-large wedding_vip_submit" onclick="click_form()" id="apply_wedding">提交申请</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="span4 span5_div_apply"  style="_float: right;">
+          婚宴/酒会因为开车不能喝酒，欢乐的时刻不能尽兴？现在，只要您的婚宴/酒会主题创意独特、规模够大、气氛够嗨，就有机会得到起点出行赞助的现场代驾服务。如您的婚宴/酒会需要我们赞助代驾服务，请详细填写下列表格。
+          <br/><br/>
+          申请提交成功后我们会在3-5个工作日内与您联系。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--尾部开始-->
+{dede:include filename="footer.htm"/}
+<!--尾部结束-->
+</body>
+</html>

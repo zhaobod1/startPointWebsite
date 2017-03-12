@@ -1,0 +1,415 @@
+a.button,
+#popup_ok {
+    font-size: 100%;
+    height: 3em;
+    line-height: 3em;
+    border: 0;
+    outline: 0 none !important;
+    blr: expression(this.onFocus=this.blur());
+    -webkit-appearance: none;
+    background-color: #27b458;
+    border-radius: 0.02rem;
+    color: #fff;
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 0.13rem;
+}
+
+.black-bold {
+    font-weight: bold;
+    font-size: 0.13rem;
+    color: #333333;
+}
+
+#popup_ok,
+#popup_cancel {
+    background-color: #ffffff;
+    color: #178cd1;
+    border-radius: 0;
+    height: 0.3rem;
+    line-height: 0.3rem;
+}
+
+#popup_cancel {
+    border-right: 1px solid #ddd;
+}
+
+a.ws-disabled {
+    background-color: #cccccc;
+}
+
+a.overall {
+    width: 92%;
+    position: absolute;
+    bottom: 2%;
+    left: 4%;
+}
+
+a.button:hover,
+a.button:active,
+a.button:focus {
+    color: #fff;
+}
+
+.highlight {
+    color: #ff0000;
+}
+
+.section,
+.confirm {
+    padding: 4%;
+    color: #666666;
+}
+
+.section {
+    overflow: auto;
+    height: 460px;
+}
+
+.section > div:first-child,
+.section > hr:nth-child(2),
+.section > div:nth-child(3),
+.confirm > div:first-child,
+.confirm > div:nth-child(2),
+.confirm > div:nth-child(3) {
+    margin-bottom: 4%;
+    text-align: left;
+}
+
+.confirm > div:first-child {
+    text-align: inherit;
+}
+
+.section > div:first-child,
+.confirm > div:first-child {
+    color: #333;
+    margin-top: -4%;
+}
+
+.section > table {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+table td,
+table th,
+table {
+    border-color: #ededed;
+}
+
+tr {
+    height: 0.3rem;
+}
+
+td.yes-apm {
+    color: #27b458;
+    cursor: pointer;
+}
+
+td.select {
+    background-color: #27b458;
+    color: #fff;
+}
+
+.confirm > div,
+.confirm > dl {
+    text-align: left;
+}
+
+.confirm > div:nth-child(3) {
+    text-align: center;
+}
+
+.confirm > img:nth-child(4) {
+    width: 40%;
+    margin-bottom: 4%;
+}
+
+.confirm > div.highlight {
+    margin-bottom: 4%;
+}
+
+.confirm > dl > dt,
+.confirm > dl > dd {
+    margin-bottom: 2%;
+}
+
+.confirm > div,
+.confirm > dl {
+    text-align: left;
+}
+
+.confirm > div:nth-child(3) {
+    text-align: center;
+    display: none;
+}
+
+.confirm > img:nth-child(4) {
+    width: 40%;
+    margin-bottom: 4%;
+    margin-left: 30%;
+}
+
+.confirm > div.highlight {
+    margin-bottom: 4%;
+}
+
+.confirm > div.highlight > .bold {
+    margin-bottom: 2%;
+}
+
+.confirm > dl > dt,
+.confirm > dl > dd {
+    margin-bottom: 2%;
+}
+/*
+jAlert.css
+*/
+
+#popup_container {
+    font-family: Arial, sans-serif;
+    /*min-width: 300px;*/
+    /*max-width: 600px;*/
+    
+    background: #FFF;
+    color: #000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px
+}
+
+#popup_title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 3em;
+    color: #fff;
+    background: #0082d5;
+    border-bottom: solid 1px #999;
+    cursor: default;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.title_txt {
+    float: left;
+    display: inline-block;
+    line-height: 3em;
+    margin-left: 4%;
+}
+
+.close {
+    float: right;
+    margin-right: 4%;
+    display: inline-block;
+    line-height: 3em;
+    cursor: pointer;
+    width: 30px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+#popup_content {
+    padding-top: 1em;
+    margin: 0;
+}
+
+#popup_content.confirm {
+    /*background-image: url(../img/important.gif)*/
+}
+
+#popup_content.prompt {
+    /*background-image: url(../img/help.gif)*/
+}
+
+#popup_panel {
+    text-align: center;
+    padding: 0;
+    border-top: 1px solid #dddddd;
+}
+
+#popup_ok {
+    padding: 0;
+}
+
+#popup_prompt {
+    margin: .5em 0
+}
+
+#popup_message {
+    margin-bottom: 1em;
+    padding: 0;
+    overflow: auto;
+}
+
+.global-popbox, .global-popbox .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.global-popbox {
+    white-space: nowrap;
+    text-align: center;
+    z-index: 1000;
+}
+.global-popbox .overlay {
+    background-color: rgba(0, 0, 0, .55);
+}
+.global-popbox:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+.popbox-dialog {
+    position: relative;
+    padding: 15px 25px;
+    min-width: 250px;
+    max-width: 600px;
+    display: inline-block;
+    background-color: #fff;
+    vertical-align: middle;
+    border-radius: 5px;
+    white-space: normal;
+}
+
+.popbox-dialog .title {
+    font-size: 20px;
+    margin-top: 0;
+    color: #333;
+}
+
+.popbox-dialog .popbox-body {
+    font-size: 18px;
+    color: #999;
+    line-height: 25px;
+}
+.popbox-dialog .popbox-body p {
+    margin-bottom: 0;
+}
+.popbox-dialog .popbox-ft {
+    margin-top: 20px;
+    font-size: 20px;
+}
+.popbox-dialog .popbox-ft .button {
+    line-height: 2.5em;
+    height: 2.5em;
+}
+.popbox-alert .popbox-ft .button {
+    width: 100%;
+}
+.popbox-confirm .button-default {
+    float: left;
+    width: 48%;
+    color: #333;
+    border: 1px solid #dedede;
+    background-color: #fff;
+}
+.popbox-confirm .button-default:hover, .popbox-confirm .button-default:link {
+    color: #333;
+}
+.popbox-confirm .button-primary {
+    float: right;
+    width: 48%;
+}
+.popbox-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #666;
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: 312.5%;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: 351.5625%;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    html {
+        font-size: 390.625%;
+    }
+}
+
+@media screen and (min-width: 440px) {
+    html {
+        font-size: 429.6875%;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    html {
+        font-size: 468.75%;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    html {
+        font-size: 507.8125%;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    html {
+        font-size: 546.875%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    html {
+        font-size: 585.9375%;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    html {
+        font-size: 625%;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    html {
+        font-size: 664.0625%;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    html {
+        font-size: 703.125%;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    html {
+        font-size: 742.1875%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 781.25%;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    html {
+        font-size: 937.5%;
+    }
+}

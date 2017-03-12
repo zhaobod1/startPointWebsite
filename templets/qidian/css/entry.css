@@ -1,0 +1,517 @@
+html,body {
+    height: 100%;
+    width: 100%;
+}
+.nav-bar-item:hover {
+    text-decoration: underline;
+}
+
+.row-fluid [class*="span"] {
+    margin-left: 0px \9;
+}
+
+.custom-figure img {
+    width: 100%;
+    height: auto;
+}
+
+.driverinfo h2 {
+    padding-left: 46px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.notice-con {
+    padding-top: 30px;
+}
+
+.notice-con p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.apply-warn {
+    background: url("../img/apply-notice.png") no-repeat left top;
+}
+
+.apply-info {
+    background: url("../img/apply-info.png") no-repeat left top;
+}
+
+.row-fluid {
+    padding: 12px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.row-fluid .span4 {
+    width: 47%;
+    margin-left: 0;
+}
+
+.row-fluid .span4 label {
+    font-size: 14px;
+}
+
+.span4 span.required {
+    color: #ff6600;
+}
+
+.row-fluid .fl5 {
+    margin-left: 5%;
+}
+
+.span4 .input-txt {
+    width: 100%;
+    outline: none;
+}
+
+.span4 select option {
+    padding: 5px 10px;
+    line-height: 22px;
+}
+
+.span4 .select-year {
+    float: left;
+    width: 48%;
+}
+
+.span4 .yw1_button {
+    vertical-align: top;
+    line-height: 30px;
+}
+
+.span4 .select-month {
+    float: right;
+    width: 48%;
+}
+
+.submit .no-chk {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url("../img/no-chk.png") no-repeat;
+}
+
+.submit .chk-ok {
+    background: url("../img/chk-ok.png") no-repeat;
+}
+
+.submit label {
+    float: left;
+    margin-left: 10px;
+}
+
+.submit .agreement-link {
+    float: left;
+    color: #0099cc;
+}
+
+.submit p {
+    float: left;
+    margin: 50px 0 100px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.submit p a.btn-block {
+    display: block;
+    width: 438px;
+    margin: 0 auto;
+    border-radius: 3px;
+    font-size: 20px;
+    background: #ccc;
+    cursor: pointer;
+    text-align: center;
+    color: #FFF;
+    line-height: 26px;
+}
+
+.err-tip {
+    display: block;
+    width: 90%;
+    color: #ff6600;
+    font-size: 12px;
+}
+
+.v_src,
+.other_src {
+    width: 100%;
+}
+
+.driverinfo {
+    position: relative;
+}
+
+.mask-bg {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: #000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    /*background: rgba(0,0,0,.7);*/
+}
+
+.mask-main {
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin: -125px 0 0 -190px;
+    width: 380px;
+    height: 250px;
+    text-align: center;
+    border-radius: 3px;
+    background: #FFF;
+    z-index: 11;
+}
+
+.mask-main p {
+    padding-top: 116px;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    color: #333;
+}
+
+.mask-msg-err {
+    background: url('../img/err-icon.png') no-repeat center 60px;
+}
+
+.ws-pos-info {
+    padding: 30px;
+}
+
+.section .ws-pos-info {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.ws-pos-title {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ws-pos-title img {
+    width: 24px;
+    margin-top: -4px;
+}
+
+.ws-pos-list {
+    overflow: hidden;
+    clear: both;
+}
+
+.ws-pos-list li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.ws-pos-list li span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ws-pos-list li input {
+    margin: 0;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ws-pos-info .button {
+    margin-left: 25%;
+}
+
+.ws-pos-time {
+    margin-top: 15px;
+}
+
+#v_verifyCode {
+    width: 66% !important;
+    float: left;
+}
+
+#v-verifyCode a {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    width: 30%;
+    float: right;
+    margin-right: 0;
+    text-align: center;
+    border-radius: 4px;
+    background: #CCC;
+    color: #fff;
+}
+
+#v-verifyCode a.ws-blue {
+    background: #007ADB;
+}
+
+#err-tip-verifyCode {
+    float: left;
+}
+
+.apm-table {
+    display: none;
+}
+
+.ws-active-table {
+    display: table;
+}
+.winpop {
+    height: 550px;
+    width: 80%;
+    display: none;
+    border: 1px solid #ccc;
+    top: 10%;
+    left: 10%;
+    padding: 40px;
+    background: #fff;
+    overflow: auto;
+    position: fixed;
+    z-index: 11;
+}
+.mask {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: #000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    z-index: 10;
+}
+.winpop .close {
+
+    height: 20px;
+    width: 20px;
+    color: #999;
+    font-size: 32px;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top:10px;
+    right:-30px;
+}
+.winpop .submit p {
+    margin: 20px 0 0;
+}
+
+.road-test {
+    width: 440px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.road-test .title {
+    font-size: 24px;
+    margin: 0;
+}
+.road-test .icon-identity {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    background-position: 0 0;
+    background-image: url(../img/road-test/icon_identity.png);
+}
+.road-test-bd {
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.road-test-bd .label-txt {
+    font-size: 18px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.road-test-bd input {
+    width: 240px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+.road-test .road-test-ft .button {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+}
+.road-test .road-test-ft .button.disable {
+    background-color: #ccc;
+}
+.redirect-remain-sec {
+    color: #0385d4;
+}
+
+#examCol .section {
+    height: auto;
+    padding-bottom: 0;
+}
+
+#examCol .section .hd{
+    margin: 0;
+}
+
+#examCol .section hr {
+    margin-bottom: 20px;
+}
+
+#examCol .btn-wrap {
+    text-align: center;
+}
+
+#apm_now {
+    position: static;
+    margin: 0 auto;
+    width: 49%;
+}
+#examCol .apm-table {
+    margin-top: 10px;
+    border: 1px;
+}
+
+.pre-order-flow {
+    padding: 30px;
+}
+
+.recurit-steps-header .steps {
+    margin: 0;
+}
+
+.recurit-steps-header .step {
+    position: relative;
+    width: 310px;
+    float: left;
+    text-align: center;
+    color: #ccc;
+    margin-right: 5px;
+}
+.recurit-steps-header .step.last {
+    margin-right: 0;
+}
+.recurit-steps-header .step:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    top: 21px;
+    background-color: currentColor;
+}
+.recurit-steps-header .step .serial {
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.recurit-steps-header .active .serial {
+    padding: 7px;
+}
+
+.recurit-steps-header .step.active {
+    color: #0385d4;
+    font-size: 18px;
+}
+
+.recurit-steps-header .serial .num {
+    display: inline-block;
+    width: 25px;
+    height:25px;
+    line-height: 25px;
+    background-color: #ccc;
+    color: #fff;
+    border-radius: 50%;
+}
+.recurit-steps-header .active .num {
+    width: 31px;
+    height:31px;
+    line-height: 31px;
+    background-color: #0385d4;
+}
+.recurit-steps-header .step .txt {
+    margin-top: 15px;
+}
+.recurit-steps-header .section {
+    padding: 0;
+}
+.queue-content {
+    margin-top: 0;
+}
+.re-sms-btn {
+    margin-left: 10px;
+}
+.weixin-follow .title {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    text-align: center;
+}
+.weixin-follow .icon-done {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/driver-recruit/icon_done.png);
+    vertical-align: middle;
+    background-position: 0 0;
+    margin-right: 10px;
+}
+.weixin-follow .icon-wx {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/driver-recruit/icon_wx.png);
+    vertical-align: middle;
+    background-position: 0 0;
+    margin-right: 10px;
+}
+.weixin-follow .title span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.wx-follow-content .hd {
+    font-size: 24px;
+}
+.wx-follow-content .text{
+    font-size: 18px;
+    color: #999;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.wx-qr {
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    text-align: center;
+}
+.wx-scan-sreenshot {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+.wx-follow-guide {
+    text-align: center;
+    margin-top: 60px;
+}
+.wx-qr p {
+    font-size: 18px;
+    margin-top: 30px;
+}
+.re-sms-btn.disable {
+    background: #C5C5C5;
+    color: #fff;
+    text-shadow: none;
+    cursor: default;
+}

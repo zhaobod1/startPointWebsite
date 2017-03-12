@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+  <meta charset="UTF-8">
+  <title>起点出行 - VIP申请</title>
+       <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/js/jquery-ui/smoothness-jquery-ui.min.css">
+    <link href="{dede:global.cfg_templets_skin/}/css/main.css?2.0.2" type="text/css" rel='stylesheet' />
+    <link href="{dede:global.cfg_templets_skin/}/css/entry.css?2.0.2" type="text/css" rel='stylesheet' />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/bootstrap-ie6.css">
+    <![endif]-->
+    <link href="{dede:global.cfg_templets_skin/}/css/edj-widget-citybox.css" type="text/css" rel='stylesheet' />
+    <link href="{dede:global.cfg_templets_skin/}/css/style.css" type="text/css" rel='stylesheet' />
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/doT.min.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.8.3.min.js"></script>
+  
+    
+</head>
+<body>
+<div class="header-container vip-banner">
+  <div class="top-nav">
+    <div class="nav-content">
+      <!--头部开始-->
+{dede:include filename="header.htm"/}
+<!--头部结束-->
+      </div>
+  </div>
+</div>
+<div class="content-container secondary">
+  <div class="tile-basic vip">
+    <div id="main" class="block clearfix form-horizontal">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span7" style="_float: left;">
+            <form id="apply-vip-form"  action="" enctype="multipart/form-data" method="post">
+            <input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+<script type="text/javascript">
+
+window.onload=function yzm(){
+  var m=Math.floor(Math.random()*10000);
+  document.getElementById("yzm").innerHTML=m;
+}
+</script>
+
+<script type="text/javascript">
+function click_form(){
+  if(document.getElementById('vname').value==""){
+  alert("姓名不能为空！");
+}else if(document.getElementById('vphone').value==""){
+alert("手机号不能为空！");
+}else if(document.getElementById('vemail').value==""){
+alert("邮箱不能为空！");
+}else if(document.getElementById('vcity').value==""){
+alert("城市不能为空！");
+}else if(document.getElementById('vmoney').value==""){
+alert("金额不能为空！");
+
+}else if(document.getElementById("vcode").value!=document.getElementById("yzm").innerHTML){
+
+alert("验证码错误！");
+}else{
+document.getElementById("apply-vip-form").action="/qidian/plus/diy.php";
+document.getElementById("apply-vip-form").submit();
+
+
+}
+
+
+
+}
+</script>
+
+
+
+              <div class="control-group">
+                <label class="control-label required" for="VipApply_name"><span style="color:red;">*</span> 申请人姓名</label>
+
+                <div class="controls">
+                  <input class="input-xlarge info" placeholder="申请人姓名" name="vname" id="vname" type="text" maxlength="4"/>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label required" for="vphone"><span style="color:red;">*</span> 申请人手机号</label>
+
+                <div class="controls">
+                  <input class="input-xlarge info" placeholder="申请人电话" name="vphone" id="vphone" type="text" maxlength="11" min="11" max="11"/>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label"  >申请类型</label>
+
+                <div class="controls">
+                  <select class="info" name="vlx" id="type">
+                    <option value="企业" >企业</option>
+                    <option value="个人" selected="selected">个人</option>
+                  </select></div>
+              </div>
+             
+              <div class="control-group">
+                <label class="control-label" for="VipApply_mail">邮件地址</label>
+
+                <div class="controls">
+                  <input class="input-xlarge info" placeholder="邮件地址" name="vemail" id="vemail" type="text" maxlength="50"/>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label required" for="VipApply_city_id"><span style="color:red;">*</span> 办理城市</label>
+
+                <div class="controls">
+                  <input type="text" id="vcity" class="select_city input-xlarge info"  placeholder="办理城市" name="vcity" />
+                  <!--<select class="info" name="city_id" id="VipApply_city_id">
+                    <option value="0">请选择城市</option>
+                  </select>-->
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="VipApply_book_money">充值金额</label>
+
+                <div class="controls">
+                  <input class="input-xlarge info" placeholder="充值金额" name="vmoney" id="vmoney" type="text" maxlength="10"/>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="VipApply_mark">备注</label>
+
+                <div class="controls">
+                  <textarea rows="6" class="input-xlarge info" placeholder="备注" id="vbz" name="vbz" maxlength="100"></textarea>
+                  <input type="hidden" name="dede_fields" value="vname,text;vphone,text;vlx,select;vemail,text;vcity,text;vmoney,text;vbz,multitext" />
+<input type="hidden" name="dede_fieldshash" value="837e0ecbe03995f53607eedfd55c2655" /></table>
+
+                </div>
+              </div>
+              <div class="control-group">
+                <label for="VipApply_verifyCode" class="control-label required"><span style="color:red;">* </span>验证码</label>
+
+                <div class="controls">
+                  <input maxlength="4" class="span4" placeholder="验证码" name="verifyCode" id="vcode" type="text"/> <span id="yzm" ></span> <a id="yw1_button">换一张</a>
+                </div>
+                <label  class="control-label required"> </label>
+
+                <div class="controls">
+                  <div style="color:red;display:none" class="errorMessage" id="VipApply_verifyCode_em_"></div>
+                </div>
+              </div>
+              <div class="control-group">
+                  <label class="control-label"> &nbsp;&nbsp;</label>
+                <div class="controls">
+                  <a class="btn btn-primary btn-large wedding_vip_submit" onclick="click_form()" id="apply_vip">提交申请</a>
+
+
+
+
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          <div class="span4 span5_div_apply" style="_float: right;">
+            为了方便您更加有效的利用我们提供的服务资源，节省您的宝贵时间，减少多次结算之麻烦，增加优惠幅度，特向您提供集团帐户下，最高端VIP客户体验。只需验证您提供的手机号，系统自动结算，并向您推送短信账单。可填写左侧申请表，我们会在1个工作日内联系您。
+            <br/><br/>
+            企业大客户采购<br/>
+            范  围：集团采购，代驾礼品卡、代驾电子券、代驾企业账户、司机驾驶服务等，适用于高管福利、政企福利等；<br/>
+            联系电话：010-64392767  / 010-64145000转5305<br/>
+            工作日早9点到晚7点<br/>
+            邮 箱：lixinyu@edaijia-inc.cn<br/>
+            起点出行在企业大客户采购方面，具体丰富的服务经验，可提供标准化采购协议及正规发票，售后服务完善，欢迎来电咨询。<br/><br/>
+            礼品卡官方淘宝店<br/>
+            <a target="_blank" href="https://shop102047517.taobao.com">https://shop102047517.taobao.com</a><br/>
+            可支持在线购买20元、40元、500元、1000元礼品卡<br/>
+            可提供发票，2个工作日内发货<br/>
+          </div>
+        </div>
+      </div>
+      <div class="c_content_bai"></div>
+    </div>
+  </div>
+
+
+
+    <!--尾部开始-->
+{dede:include filename="footer.htm"/}
+<!--尾部结束-->
+
+</body>
+</html>

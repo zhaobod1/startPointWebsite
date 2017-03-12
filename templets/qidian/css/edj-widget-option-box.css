@@ -1,0 +1,177 @@
+/**
+ * Created by Tomson on 14-8-20.
+ */
+
+/*option-box style*/
+.edj-option-box-open-btn { }
+
+.edj-option-box-container {
+	position              : absolute;
+    *position             :inherit;
+	display               : block;
+	width                 : 80%;
+	min-height            : 80px;
+	margin                : 5px 10%;
+	z-index               : 998;
+	background-color      : #fff;
+	border                : 1px #d7d7d7 solid;
+	-webkit-border-radius : 5px;
+	-moz-border-radius    : 5px;
+	border-radius         : 5px;
+	-webkit-box-shadow    : 0 5px 5px #d7d7d7;
+	-moz-box-shadow       : 0 5px 5px #d7d7d7;
+	box-shadow            : 0 5px 5px #d7d7d7;
+}
+
+.edj-search-box {
+	position         : relative;
+	display          : block;
+	width            : 100%;
+	height           : 50px;
+	background-color : #f8f8f8;
+	border-bottom    : 1px #d7d7d7 solid;
+	/* margin: -29px; */
+	text-align       : left;
+	vertical-align   : middle;
+}
+
+input#edj-search-input {
+	display : block;
+	width   : 125px;
+	height  : 20px;
+	float   : left;
+	margin  : 10px;
+}
+
+label {
+	float         : left;
+	width         : 60px;
+	height        : 50px;
+	line-height   : 50px;
+	margin-left   : 27px;
+	margin-bottom : 0;
+}
+
+.edj-hot-word {
+	display   : block;
+    float: left;
+
+	height    : 30px;
+	margin    : 10px;
+}
+
+.edj-hot-word span {
+	float       : left;
+	line-height : 30px;
+	color       : #333;
+}
+
+ul.hot-word-list {
+
+	float : left;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.hot-word-list li {
+	float   : left;
+	padding : 5px;
+}
+
+.hot-word-list li a {
+	color : #333;
+}
+
+.edj-letter-tabs {
+	display : block;
+	width   : 100%;
+	height  : 40px;
+}
+
+a.edj-letter-tab-item {
+	height          : 40px;
+    width: 20%;
+    *width: 19.8%;
+	/*text-decoration : underline;*/
+	border-bottom   : 1px #d7d7d7 solid;
+	border-left     : 1px #d7d7d7 solid;
+	display         : block;
+	line-height     : 35px;
+	margin          : 0;
+    float: left;
+}
+
+a.edj-letter-tab-item:first-child {
+	border-left : 0;
+}
+
+.edj-letter-tab-active {
+	text-decoration  : none !important;
+	background-color : #f8f8f8;
+	/*border-bottom:0 !important;*/
+}
+
+.edj-tag-container {
+	width   : 100%;
+	padding : 25px;
+}
+
+.edj-tag-container .edj-letter-row {
+	display       : block;
+	width         : 100%;
+	min-height    : 30px;
+	margin-bottom : 10px;
+}
+
+.edj-letter-row dt {
+	display : block;
+	width   : 5%;
+	float   : left;
+}
+
+.edj-letter-row dd {
+	width : 93%;
+	float : left;
+}
+
+.edj-letter-row dd ul {
+	display : block;
+	width   : 100%;
+}
+
+.edj-letter-row dd ul li {
+	display : block;
+	padding: 0 10px 0 10px;
+	float   : left;
+}
+
+.edj-letter-row dd ul li a {
+	color  : #000 !important;
+	cursor : pointer;
+}
+
+.edj-search-result-container {
+	position         : absolute;
+	display          : block;
+	width            : 100%;
+	min-height       : 290px;
+	top              : 50px;
+	z-index          : 999;
+	background-color : #fff;
+}
+
+ul.edj-search-result-list {
+	display : block;
+	width   : 80%;
+	margin  : 50px 10% auto 10%;
+}
+
+.edj-search-result-list li {
+	width       : 50px;
+	height      : 40px;
+	line-height : 35px;
+	float       : left;
+}
+button.close {
+    float: right;
+}

@@ -1,0 +1,78 @@
+.price-bar-chart {
+	font-size: 14px;
+	padding: 50px 10px 30px 10px;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.price-bar-chart-inner {
+	position: relative;
+}
+.divide-rule {
+	position: relative;
+	height: 0;
+	border-bottom: 1px dotted #ccc;
+	margin-left: 25px;
+	margin-bottom: 30px;
+}
+.divide-rule .value {
+	position: absolute;
+	left: -25px;
+	top: -10px;
+	font-size: 12px;
+	line-height: 20px;
+}
+.price-bar-chart .colums {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+	left: 25px;
+}
+.price-bar-chart .colum {
+	position: relative;
+	height: 100%;
+	float: left;
+	margin-right: 15px;
+	text-align: center;
+}
+.price-bar-chart .colum:last-child {
+	margin-right: 0;
+}
+.price-bar-chart .colum-bar {
+	position: absolute;
+	width: 20px;
+	left: 50%;
+	margin-left: -10px;
+	bottom: 0;
+	background-color: #f60;
+	border-radius: 5px;
+}
+.price-bar-chart .value-tip {
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	margin-left: -25px;
+	width: 50px;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 7px 0;
+	line-height: 16px;
+	border-radius: 3px;
+}
+.price-bar-chart .colum-range {
+	position: relative;
+	top: 100%;
+	font-size: 14px;
+	margin-top: 10px;
+}
+.price-bar-chart .value-tip:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -6px;
+	bottom: -5px;
+	border: 6px solid transparent;
+	border-bottom: none;
+	border-top-color: #000;
+}
