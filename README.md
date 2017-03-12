@@ -8,7 +8,7 @@
     password: huo15com
     
     database:
-    DB_username: StartPointWebiste
+    DB_username: StartPointWebiste_db
     用户名：SpWebsite
     密码：huo15com
 
