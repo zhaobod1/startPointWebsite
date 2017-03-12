@@ -17,6 +17,7 @@ define('DEDEDATA', DEDEROOT.'/data');
 define('DEDEMEMBER', DEDEROOT.'/member');
 define('DEDETEMPLATE', DEDEROOT.'/templets');
 
+
 // ------------------------------------------------------------------------
 define('DEDEMODEL', './model');
 define('DEDECONTROL', './control');
