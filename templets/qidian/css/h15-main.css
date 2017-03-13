@@ -1,3 +1,14 @@
 .carousel-inner .item h3.h15-font-white {
     color: #ffffff;
 }
+
+.title-basci{
+    overflow-x: hidden;
+    margin-top: 14px;
+    border: solid 1px #d7d7d7;
+    background-color: #fff;
+}
+.mid-nav div.nav-item img.nav-icon {
+    width: 122px;
+    margin-top: 33px;
+}
